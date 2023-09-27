@@ -7,7 +7,7 @@ Provide database design and the ability to capture partner and client data. This
 
 
 # Summary
-## Database Concepts
-## Web Development
-## User interface Design
-## Search and report building
+### Database Concepts
+### Web Development
+### User interface Design
+### Search and report building
