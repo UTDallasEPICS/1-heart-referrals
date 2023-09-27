@@ -1,17 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <main>
-        <p>
-        <h1 id="header"> This will be main page </h1>
-        </p>
-      </main>
-      
-    </div>
+    <>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/' exact />
+        </Routes>
+      </Router>
+    </>
+
   );
 }
 
