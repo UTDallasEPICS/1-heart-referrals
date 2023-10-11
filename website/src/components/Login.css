@@ -1,0 +1,14 @@
+
+.login-container {
+    width: 30vw;
+    height: 60vh;
+    margin: auto;
+    margin-top: 10vh;
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    text-align: center;
+}
+
+.login-container > h1 {
+    font-size: ;
+}
