@@ -1,14 +1,26 @@
+:root {
+    --height: 60vh;
+    --width: 30vw;
+}
 
 .login-container {
-    width: 30vw;
-    height: 60vh;
-    margin: auto;
-    margin-top: 10vh;
+    background-color: white;
+    width: var(--width);
+    height: var(--height);
+    margin-left: calc(50vw - (var(--width) / 2));
+    margin-top: calc(50vh - (var(--height) / 2));
     border: 1px solid black;
     border-radius: 1em 1em;
     text-align: center;
+    padding-top: calc(.05 * var(--height))
 }
 
-.login-container > h1 {
-    font-size: ;
+.login-container > h2 {
+    font-size: calc(.05 * var(--height));
+    padding-bottom: calc(.2 * var(--height))
+}
+
+.login-container > form > input[type=text] {
+    width: calc(.9 * var(--width));
+
 }
