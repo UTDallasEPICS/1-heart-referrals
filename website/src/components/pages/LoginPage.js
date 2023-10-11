@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../App.js'
 import Login from '../Login.js'
-
 const divStyle = {
   position: 'absolute',
   backgroundColor: '#ebebeb',
