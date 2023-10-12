@@ -12,15 +12,58 @@
     border: 1px solid black;
     border-radius: 1em 1em;
     text-align: center;
-    padding-top: calc(.05 * var(--height))
+    padding-top: calc(.1 * var(--height))
 }
 
 .login-container > h2 {
     font-size: calc(.05 * var(--height));
-    padding-bottom: calc(.2 * var(--height))
+    padding-bottom: calc(.25 * var(--height))
+}
+
+.login-container > form > input{
+    width: calc(.8 * var(--width));
+    height: calc(.1 * var(--height));
+    border-radius: 1em 1em;
+    font-size: 100%;
+    outline: none;
+    border: none;
+    margin-bottom: calc(.05 * var(--height));
 }
 
 .login-container > form > input[type=text] {
-    width: calc(.9 * var(--width));
+    background-color: #ebebeb;
+    padding-left: 3%;
+    transition: outline .1s;
+}
 
+.login-container > form > input[type=submit] {
+    background-color: #b41212;
+    border-radius: .67em .67em;
+    color: white;
+    font-size: 150%;
+    transition: outline .1s,
+    color .2s,
+    background-color .2s;
+}
+
+.login-container > form > input[type=text]:focus {
+    outline: 2px solid #b41212;
+}
+
+.login-container > form > input[type=submit]:hover {
+    background-color: white;
+    outline: 2px solid #b41212;
+    color: #b41212;
+}
+
+.login-container > a {
+    display: block;
+    height: calc(.02 * var(--height));
+    color: #b41212;
+    text-decoration: none;
+    margin-bottom: 10;
+}
+
+.login-container > a:hover {
+    text-decoration: underline;
 }

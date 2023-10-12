@@ -16,6 +16,10 @@ function Login() {
     event.preventDefault();
     axios.post("https://reqres.in/api/users", {cred})
     .then((response) => console.log(response))
+    setCred({
+      user: "",
+      pwd: ""
+    })
   }
   return (
     <div className="login-container">
@@ -23,9 +27,10 @@ function Login() {
         <form onSubmit={handleSubmit}>
             <input className="login-input" onChange={handleInput} type="text" value={cred.user} id="user" name="user" placeholder='Your Email'/><br></br>
             <input className="login-input" onChange={handleInput} type="text" value={cred.pwd} id="pwd" name="pwd" placeholder='Your Password'/><br></br>
-            <input className="login-submit" type="submit" value="Sign in"/>
+            <input className="login-submit" type="submit" value="SIGN IN"/>
         </form>
-        <a href="/">Forgot your password?</a>
+        <a href="/">Forgot your password?</a><br/>
+        <a href="/">Create an Account</a>
 
     </div>
   )
