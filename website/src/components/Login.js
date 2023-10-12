@@ -9,7 +9,6 @@ function Login() {
   });
 
   const handleInput = (event) => {
-    console.log(event.target.name + " " + event.target.value);
     setCred({...cred, [event.target.name] : event.target.value});
   }
 

@@ -4,9 +4,9 @@ import Login from '../Login.js'
 const divStyle = {
   position: 'absolute',
   backgroundColor: '#ebebeb',
-  margin: '-10px 0 0 -10px', 
-  width: '100vw',
-  height: '100vh'
+  margin: '0 0 0 0', 
+  height: '100vh',
+  width: '100vw'
 }
 function LoginPage() {
   return (
