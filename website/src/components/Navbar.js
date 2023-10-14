@@ -28,7 +28,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src="/images/ohm-logo.jpg" height="60px"></img>
+            <img src="/images/ohm-logo.jpg" to="/" alt="" height="60px"></img>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -60,7 +60,7 @@ function Navbar() {
 
             <li>
               <Link
-                to='/sign-up'
+                to='/login'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
@@ -68,7 +68,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline' to="login">SIGN UP</Button>}
         </div>
       </nav>
     </>
