@@ -16,7 +16,7 @@ app.post('/hi',async (req,res)=>{
     catch(err){
         console.log(err)
         res.sendStatus(500)
-    }
+    } //check
 })
 app.get('/setup',async (req,res)=>{
     try{
