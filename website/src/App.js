@@ -3,17 +3,25 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import Sidebar from './components/Sidebar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Reports, ReportsOne, ReportsTwo, ReportsThree } from './components/pages/Reports';
+import LoginPage from './components/pages/LoginPage';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import SignUpPage from './components/pages/SignUpPage';
+import ForgotPage from './components/pages/ForgotPage';
 
-//import Services from './components/pages/Services';
-//import Products from './components/pages/Products';
-//import SignUp from './components/pages/SignUp'
-
+function defaultPage(Comp) {
+  return(
+    <>
+      <Navbar/>
+      <Comp/>
+    </>
+  )
+}
 function App() {
   return (
     <>
       <Router>
+    /*
         <Navbar >
         <Routes>
           <Route path='/' exact element={Home} />
@@ -31,9 +39,18 @@ function App() {
         <Route path='/Sidebar/reports/reports2' exact element={ReportsTwo} />
         <Route path='/Sidebar/reports/reports3' exact element={ReportsThree} />
 
+*/
+        <Routes>
+          <Route path='/login' exact Component={LoginPage}/>
+          <Route path='/' exact element={defaultPage(Home)} />
+          <Route path='/services'  />
+          <Route path='/products'  />
+          <Route path='/login/forgot'  exact Component={ForgotPage}/>
+          <Route path='/sign-up' exact Component={SignUpPage}/>
         </Routes>
         </Sidebar>
       </Router>
+      
     </>
   );
 }
