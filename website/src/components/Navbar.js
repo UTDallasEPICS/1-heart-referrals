@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import Sidebar from './Sidebar';
+//import { useNavigate } from 'react-router-dom';
 function Navbar() {
+  const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -41,11 +44,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/services'
+                to='/Sidebar'
                 className='nav-links'
-                onClick={closeMobileMenu}
+                onClick={Sidebar}
               >
-                About Us
+                Landing Page
               </Link>
             </li>
             <li className='nav-item'>
@@ -68,6 +71,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+
           {button && <Button buttonStyle='btn--outline' to="login">SIGN UP</Button>}
         </div>
       </nav>
