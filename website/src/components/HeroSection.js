@@ -8,10 +8,10 @@ const HeroSection = () => {
         <div className='hero-container'>
             <video src="/videos/video-2.mp4" autoPlay loop muted />
             {/* <h1>We exists to coordinate the WHOLE community to maximize well-being in daily life, and respond to and recover from any community crisis.</h1> */}
-            <p>GET REFERRAL TODAY !</p>
+            <p>GET A REFERRAL TODAY !</p>
             <div className="hero-btns">
-                <Button className='btns' buttonStyle='btn--primary'
-                    bettonSize='btn--large'
+                <Button className='btns' to="login" buttonStyle='btn--primary'
+                    buttonSize='btn--large'
                 >
                     LET'S START
                 </Button>

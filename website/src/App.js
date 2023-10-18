@@ -2,23 +2,33 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import Services from './components/pages/Services';
-//import Products from './components/pages/Products';
-//import SignUp from './components/pages/SignUp';
+import LoginPage from './components/pages/LoginPage';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import SignUpPage from './components/pages/SignUpPage';
+import ForgotPage from './components/pages/ForgotPage';
 
+function defaultPage(Comp) {
+  return(
+    <>
+      <Navbar/>
+      <Comp/>
+    </>
+  )
+}
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Routes>
-          <Route path='/' exact Component={Home} />
+          <Route path='/login' exact Component={LoginPage}/>
+          <Route path='/' exact element={defaultPage(Home)} />
           <Route path='/services'  />
           <Route path='/products'  />
-          <Route path='/sign-up'  />
+          <Route path='/login/forgot'  exact Component={ForgotPage}/>
+          <Route path='/sign-up' exact Component={SignUpPage}/>
         </Routes>
       </Router>
+      
     </>
   );
 }
