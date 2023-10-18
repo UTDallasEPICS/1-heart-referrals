@@ -14,24 +14,25 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar />
+        <Navbar >
         <Routes>
-          <Route path='/' exact Component={Home} />
-          <Route path='/sidebar'  />
+          <Route path='/' exact element={Home} />
+          <Route path='/Sidebar' exact element={Sidebar}  />
           <Route path='/products'  />
           <Route path='/sign-up'  />
-          </Routes> */}
+          </Routes>
+        </Navbar>
 
-
-        <Sidebar />
+        <Sidebar>
         <Routes>
 
-        <Route path='/reports' exact component={Reports} />
-        <Route path='/reports/reports1' exact component={ReportsOne} />
-        <Route path='/reports/reports2' exact component={ReportsTwo} />
-        <Route path='/reports/reports3' exact component={ReportsThree} />
+        <Route path='/Sidebar/reports' exact element={<Reports/>} />
+        <Route path='/Sidebar/reports/reports1' exact element={<ReportsOne />} />
+        <Route path='/Sidebar/reports/reports2' exact element={ReportsTwo} />
+        <Route path='/Sidebar/reports/reports3' exact element={ReportsThree} />
 
         </Routes>
+        </Sidebar>
       </Router>
     </>
   );
