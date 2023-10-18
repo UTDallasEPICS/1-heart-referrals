@@ -47,7 +47,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                About Us
+                Landing Page
               </Link>
             </li>
             <li className='nav-item'>
@@ -71,6 +71,9 @@ function Navbar() {
             </li>
           </ul>
           {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+
+
+
         </div>
       </nav>
     </>
