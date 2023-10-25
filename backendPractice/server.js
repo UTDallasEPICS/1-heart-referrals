@@ -1,30 +1,22 @@
 const express = require("express")
 const app= express()
-const PORT=3000;
+const PORT=3001;
 const pool = require('./db')
+const axios = require("axios").create({baseUrl: "http://localhost:3001/"});
 //routes 
 app.use(express.json())
-app.get('/', async(req,res)=>{
-    res.send("Hello Yuh")
-})
-app.post('/hi',async (req,res)=>{
-    const {name,location}=req.body
-    try{
-        await pool.query("INSERT INTO clients (name,address) VALUES ($1,$2)",[name,location])
-        res.status(200).send({message:"successful added client"})
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
+  next();
+});
+app.post('/', async(req,res)=>{
+    try {
+        console.log(req.body);
     }
-    catch(err){
-        console.log(err)
-        res.sendStatus(500)
-    } //check
-})
-app.get('/setup',async (req,res)=>{
-    try{
-        await pool.query("CREATE TABLE schools(id SERIAL PRIMARY KEY, name VARCHAR(100),address VARCHAR(100)")
-    }catch(err){
-        console.log(err)
-        res.sendStatus(500)
-    }
+    catch {}
+    
 })
 app.listen(PORT, ()=>{
     console.log(`App is running on port ${PORT}`)
