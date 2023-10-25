@@ -21,25 +21,6 @@ function App() {
   return (
     <>
       <Router>
-    /*
-        <Navbar >
-        <Routes>
-          <Route path='/' exact element={Home} />
-          <Route path='/Sidebar' exact element={Sidebar}  />
-          <Route path='/products'  />
-          <Route path='/sign-up'  />
-          </Routes>
-        </Navbar>
-
-        <Sidebar>
-        <Routes>
-
-        <Route path='/Sidebar/reports' exact element={<Reports/>} />
-        <Route path='/Sidebar/reports/reports1' exact element={<ReportsOne />} />
-        <Route path='/Sidebar/reports/reports2' exact element={ReportsTwo} />
-        <Route path='/Sidebar/reports/reports3' exact element={ReportsThree} />
-
-*/
         <Routes>
           <Route path='/login' exact Component={LoginPage}/>
           <Route path='/' exact element={defaultPage(Home)} />
@@ -47,8 +28,13 @@ function App() {
           <Route path='/products'  />
           <Route path='/login/forgot'  exact Component={ForgotPage}/>
           <Route path='/sign-up' exact Component={SignUpPage}/>
+          <Route path='/Sidebar' exact Component={Sidebar}>
+            <Route path='/Sidebar/reports' exact element={<Reports/>} />
+            <Route path='/Sidebar/reports/reports1'  exact element={ReportsOne} />
+            <Route path='/Sidebar/reports/reports2'  exact element={ReportsTwo} />
+            <Route path='/Sidebar/reports/reports3'  exact element={ReportsThree} />
+          </Route>
         </Routes>
-        </Sidebar>
       </Router>
       
     </>

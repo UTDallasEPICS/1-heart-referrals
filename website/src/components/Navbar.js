@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Navbar.css';
 import Sidebar from './Sidebar';
-//import { useNavigate } from 'react-router-dom';
 function Navbar() {
-  const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
