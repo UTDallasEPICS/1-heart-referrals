@@ -14,7 +14,7 @@ function Login({type}) {
     setCred({...cred, [event.target.name] : event.target.value});
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     axios.post("https://reqres.in/api/users", {cred})
     .then((response) => console.log(response))

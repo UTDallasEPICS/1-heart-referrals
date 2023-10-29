@@ -19,7 +19,7 @@ export const ReportsOne = () => {
 export const ReportsTwo = () => {
   return (
     <div className='reports'>
-      <h1>Reports/reports2</h1>
+      <h1>Reports/reports22</h1>
     </div>
   );
 };
