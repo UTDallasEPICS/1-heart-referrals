@@ -8,6 +8,8 @@ import { AssistanceRequests, AssistanceAction, Closed, Processed } from './compo
 import { InboundReferrals, InboundAction, InReview } from './components/pages/InboundReferrals';
 import { InternalCases, OpenCase, ClosedCase, AllCase } from './components/pages/InternalCases';
 import { OutboundReferrals,OutDrafts, OutRejected, OutRecalled, OutActions, OutReview, OutClosed, OutAll } from './components/pages/OutboundReferrals';
+import { ExternalCases, ExOpenCase, ExClosedCase, ExAllCase } from './components/pages/ExternalCases';
+import { OutOfNetworkCasesCases, OutOpenCase, OutClosedCase, OutAllCase } from './components/pages/OutOfNetwrokCases';
 import LoginPage from './components/pages/LoginPage';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
@@ -46,7 +48,7 @@ function App() {
 
             <Route path='/Sidebar/internalCases' exact element={<InternalCases/>} />
               <Route path='/Sidebar/internalCases/Open' exact element={OpenCase} />
-              <Route path='/Sidebar/internalCases/Close' exact element={ClosedCase} />
+              <Route path='/Sidebar/internalCases/Closed' exact element={ClosedCase} />
               <Route path='/Sidebar/internalCases/All' exact element={AllCase} />
 
               <Route path='/Sidebar/outbound' exact element={<OutboundReferrals/>} />
@@ -59,13 +61,22 @@ function App() {
               <Route path='/Sidebar/outbound/all' exact element={OutAll} />
 
             
+              <Route path='/Sidebar/externalCases' exact element={<ExternalCases/>} />
+              <Route path='/Sidebar/externalCases/externalOpen' exact element={ExOpenCase} />
+              <Route path='/Sidebar/externalCases/externalClosed' exact element={ExClosedCase} />
+              <Route path='/Sidebar/externalCases/externalAll' exact element={ExAllCase} />
+
+              <Route path='/Sidebar/outOfNetworkCases' exact element={<OutOfNetworkCasesCases/>} />
+              <Route path='/Sidebar/outOfNetworkCases/outOpen' exact element={OutOpenCase} />
+              <Route path='/Sidebar/outOfNetworkCases/outClosed' exact element={OutClosedCase} />
+              <Route path='/Sidebar/outOfNetworkCases/outAll' exact element={OutAllCase} />
 
             
 
-            <Route path='/Sidebar/reports' exact element={<Reports/>} />
+            {/* <Route path='/Sidebar/reports' exact element={<Reports/>} />
               <Route path='/Sidebar/reports/reports1'  exact element={ReportsOne} />
               <Route path='/Sidebar/reports/reports2'  exact element={ReportsTwo} />
-              <Route path='/Sidebar/reports/reports3'  exact element={ReportsThree} />
+              <Route path='/Sidebar/reports/reports3'  exact element={ReportsThree} /> */}
           </Route>
         </Routes>
       </Router>
