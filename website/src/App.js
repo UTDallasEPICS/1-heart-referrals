@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import Sidebar from './components/Sidebar';
-import { Reports, ReportsOne, ReportsTwo, ReportsThree } from './components/pages/Reports';
 import { AssistanceRequests, AssistanceAction, Closed, Processed } from './components/pages/AssistanceRequests';
 import { InboundReferrals, InboundAction, InReview } from './components/pages/InboundReferrals';
 import { InternalCases, OpenCase, ClosedCase, AllCase } from './components/pages/InternalCases';
@@ -14,6 +13,7 @@ import LoginPage from './components/pages/LoginPage';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
 import ForgotPage from './components/pages/ForgotPage';
+import { Register } from './components/pages/Register'
 
 function defaultPage(Comp) {
   return(
@@ -28,14 +28,20 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/login' exact Component={LoginPage}/>
-          <Route path='/' exact element={defaultPage(Home)} />
-          <Route path='/services'  />
-          <Route path='/products'  />
-          <Route path='/login/forgot'  exact Component={ForgotPage}/>
-          <Route path='/sign-up' exact Component={SignUpPage}/>
-          <Route path='/Sidebar' exact Component={Sidebar}>
+          {/* <Route path='/login' exact Component={LoginPage}/> */}
+          <Route path='/login' exact Component={Register}/>
 
+          <Route path='/' exact element={defaultPage(Home)} />
+          {/* <Route path='/services'  /> */}
+          {/* <Route path='/products'  /> */}
+          {/* <Route path='/login/forgot'  exact Component={ForgotPage}/> */}
+          {/* <Route path='/sign-up' exact Component={SignUpPage}/> */}
+
+
+          {/* <Route path='/Sidebar/register' exact Component={Register}/>  */}
+          <Route path='/sign-up' exact Component={Register}/>
+
+          <Route path='/Sidebar' exact Component={Sidebar}>
 
             <Route path='/Sidebar/inboundReferrals' exact element={<InboundReferrals/>} />
               <Route path='/Sidebar/inboundReferrals/inboundAction' exact element={InboundAction} />
@@ -71,12 +77,6 @@ function App() {
               <Route path='/Sidebar/outOfNetworkCases/outClosed' exact element={OutClosedCase} />
               <Route path='/Sidebar/outOfNetworkCases/outAll' exact element={OutAllCase} />
 
-            
-
-            {/* <Route path='/Sidebar/reports' exact element={<Reports/>} />
-              <Route path='/Sidebar/reports/reports1'  exact element={ReportsOne} />
-              <Route path='/Sidebar/reports/reports2'  exact element={ReportsTwo} />
-              <Route path='/Sidebar/reports/reports3'  exact element={ReportsThree} /> */}
           </Route>
         </Routes>
       </Router>
