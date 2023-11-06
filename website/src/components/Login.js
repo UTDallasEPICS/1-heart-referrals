@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
-import axios from 'axios'
+import axios from './api/axios'
 import { Button } from './Button';
 function Login({type}) {
   const [cred, setCred] = useState({

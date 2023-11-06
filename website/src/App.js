@@ -13,7 +13,8 @@ import LoginPage from './components/pages/LoginPage';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
 import ForgotPage from './components/pages/ForgotPage';
-import { Register } from './components/pages/Register'
+import { Register } from './components/pages/Register';
+import { Loginn } from './components/pages/Loginn';
 
 function defaultPage(Comp) {
   return(
@@ -29,7 +30,6 @@ function App() {
       <Router>
         <Routes>
           {/* <Route path='/login' exact Component={LoginPage}/> */}
-          <Route path='/login' exact Component={Register}/>
 
           <Route path='/' exact element={defaultPage(Home)} />
           {/* <Route path='/services'  /> */}
@@ -39,7 +39,8 @@ function App() {
 
 
           {/* <Route path='/Sidebar/register' exact Component={Register}/>  */}
-          <Route path='/sign-up' exact Component={Register}/>
+          <Route path='/login' exact Component={Loginn}/>
+          <Route path='/register' exact Component={Register}/>
 
           <Route path='/Sidebar' exact Component={Sidebar}>
 
