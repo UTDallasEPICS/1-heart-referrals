@@ -1,8 +1,9 @@
 import React from 'react';
+import './Pages.css';
 
 export const AssistanceRequests = () => {
   return (
-    <div className='assistanceRequests'>
+    <div className='filter-bar'>
       <h1>ASSISTANCE REQUESTS</h1>
     </div>
   );
