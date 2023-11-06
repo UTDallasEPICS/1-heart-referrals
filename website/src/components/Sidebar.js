@@ -11,6 +11,7 @@ const Nav = styled.div`
   background: #15171c;
   height: 80px;
   display: flex;
+  color: #FFFFFF 
   justify-content: flex-start;
   align-items: center;
 `;
@@ -30,7 +31,6 @@ const SidebarNav = styled.nav`
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
@@ -50,15 +50,10 @@ const Sidebar = () => {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
-          <NavIcon to='#'>
-            <FaIcons.FaBars onClick={showSidebar} />
-          </NavIcon>
+          <h1>OHMEGA</h1>
         </Nav>
-        <SidebarNav sidebar={sidebar}>
+        <SidebarNav sidebar={true}>
           <SidebarWrap>
-            <NavIcon to='#'>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
