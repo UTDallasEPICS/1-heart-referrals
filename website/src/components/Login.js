@@ -79,7 +79,7 @@ function Login({type}) {
       document.getElementById("user").focus();
       return;
     }
-    if(!validPwd.test(cred.pwd)) {
+    if(!validPwd.test(cred.pwd) & type == "sign-up") {
       setPwdErr(true);
       document.getElementById("pwd").focus();
       setcharMinE(false);
@@ -91,7 +91,7 @@ function Login({type}) {
       cred.cpwd = "";
       return;
     }
-    if(cred.pwd !== cred.cpwd && type ) {
+    if(cred.pwd !== cred.cpwd && type == "sign-up") {
       setCPwdErr(true);
       document.getElementById("pwd").focus();
       setcharMinE(false);
