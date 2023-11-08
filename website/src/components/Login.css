@@ -1,0 +1,135 @@
+.login-container {
+    --height: 400px;
+    --width: 400px;
+    position: absolute;
+    background-color: #ebebeb;
+    margin: 0 0 0 0;
+    height: 100%;
+    width: 100%;
+    
+}
+.login-float {
+    display: flex;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: var(--width);
+    margin-left: calc(50vw - (var(--width) / 2));
+    margin-top: calc(50vh - (var(--height) / 2));
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    text-align: center;
+    padding-top: calc(.1 * var(--height));
+    padding-bottom: calc(.05 * var(--height));
+}
+
+.checkPwd {
+    transition: opacity .1s;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: calc(.8 *var(--width));
+    height: 100%;
+    margin-top: calc(50vh - (var(--height) / 2 - 10vh));
+    margin-left: calc(.05 * var(--width));
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    text-align: left;
+    padding-top: calc(.1 * var(--height));
+    padding-left: calc(.075 * var(--width));
+    padding-bottom: calc(.05 * var(--height));
+}
+
+.checkPwd > ul {
+    list-style: none;
+    padding: 0px
+}
+
+.checkPwd > ul > li {
+    margin-bottom: 20px;
+}
+
+.login > h2 {
+    font-size: auto;
+    padding-bottom: calc(.1 * var(--height));
+    margin: 0 calc(.05 * var(--height));
+}
+
+.login > form > input{
+    width: calc(.8 * var(--width));
+    height: calc(.1 * var(--height));
+    border-radius: 1em 1em;
+    font-size: 100%;
+    outline: none;
+    border: none;
+    margin-bottom: calc(.05 * var(--height));
+}
+.login > form > p{
+    margin-left: calc(.1 * var(--width));
+}
+
+.login > form > input[type=text], input[type=password] {
+    background-color: #ebebeb;
+    padding-left: 3%;
+    transition: outline .1s;
+}
+
+.login > form > input[type=submit] {
+    background-color: #b41212;
+    border-radius: .67em .67em;
+    color: white;
+    font-size: 150%;
+    transition: outline .1s,
+    color .2s,
+    background-color .2s;
+}
+
+.login > form > input[type=text]:focus, input[type=password]:focus {
+    outline: 2px solid #b41212;
+}
+
+.login > form > input[type=submit]:hover {
+    background-color: white;
+    outline: 2px solid #b41212;
+    color: #b41212;
+}
+
+.login > a {
+    display: inline-block;
+    height: auto;
+    color: #b41212;
+    text-decoration: none;
+    margin-bottom: 10;
+}
+
+.login > a:hover {
+    text-decoration: underline;
+}
+
+.login-btns {
+    display: flex;
+    justify-content: center;
+}
+.login-btns .btn {
+    background-color: transparent;
+    color: #b41212;
+    width: fit-content;
+}
+
+.show-btns {
+    position: relative;
+    margin-top: -60px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
+
+.show-btns .btn {
+    background-color: transparent;
+    color: #b41212;
+}
+
+.login-btns .btn:hover {
+    filter:drop-shadow(0px 0px 15px #000000);
+}
