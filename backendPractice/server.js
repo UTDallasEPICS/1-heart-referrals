@@ -11,6 +11,17 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();
 });
+
+app.get('/', async(req, res) => {
+    try {
+        const test = await pool.query("SELECT * from test;");
+        console.log(test.rows);
+        //console.log("Hello World");
+    } catch (error) {
+        
+    }
+})
+
 app.post('/', async(req,res)=>{
     try {
         console.log(req.body);
