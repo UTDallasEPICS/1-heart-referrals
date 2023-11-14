@@ -8,7 +8,9 @@
     width: 100%;
     
 }
-
+.login-float {
+    display: flex;
+}
 .login {
     display: flex;
     flex-direction: column;
@@ -21,6 +23,32 @@
     text-align: center;
     padding-top: calc(.1 * var(--height));
     padding-bottom: calc(.05 * var(--height));
+}
+
+.checkPwd {
+    transition: opacity .1s;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: calc(.8 *var(--width));
+    height: 100%;
+    margin-top: calc(50vh - (var(--height) / 2 - 10vh));
+    margin-left: calc(.05 * var(--width));
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    text-align: left;
+    padding-top: calc(.1 * var(--height));
+    padding-left: calc(.075 * var(--width));
+    padding-bottom: calc(.05 * var(--height));
+}
+
+.checkPwd > ul {
+    list-style: none;
+    padding: 0px
+}
+
+.checkPwd > ul > li {
+    margin-bottom: 20px;
 }
 
 .login > h2 {
@@ -38,8 +66,11 @@
     border: none;
     margin-bottom: calc(.05 * var(--height));
 }
+.login > form > p{
+    margin-left: calc(.1 * var(--width));
+}
 
-.login > form > input[type=text] {
+.login > form > input[type=text], input[type=password] {
     background-color: #ebebeb;
     padding-left: 3%;
     transition: outline .1s;
@@ -55,7 +86,7 @@
     background-color .2s;
 }
 
-.login > form > input[type=text]:focus {
+.login > form > input[type=text]:focus, input[type=password]:focus {
     outline: 2px solid #b41212;
 }
 
@@ -87,6 +118,18 @@
     width: fit-content;
 }
 
-.btn:hover {
+.show-btns {
+    position: relative;
+    margin-top: -60px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
+
+.show-btns .btn {
+    background-color: transparent;
+    color: #b41212;
+}
+
+.login-btns .btn:hover {
     filter:drop-shadow(0px 0px 15px #000000);
 }

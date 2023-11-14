@@ -4,15 +4,16 @@ import './Pages.css';
 export const AssistanceRequests = () => {
   return (
     <div className='filter-bar'>
-      <h1>ASSISTANCE REQUESTS</h1>
+      <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
+      <body> hjfckushdhfcsihfcisehfjcsjdhckufbdvjkdf </body>
     </div>
   );
 };
 
 export const AssistanceAction = () => {
   return (
-    <div className='AssistanceAction'>
-      <h1>ASSISTANCE REQUESTS/Assistance Action</h1>
+    <div className='filter-bar'>
+      <h1>ASSISTANCE REQUESTS/Assistance Action sdhjgcdhsdcshj dsshdshgdgshys</h1>
     </div>
   );
 };
@@ -32,3 +33,4 @@ export const Processed = () => {
     </div>
   );
 };
+
