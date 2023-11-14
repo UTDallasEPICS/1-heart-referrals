@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Login.css'
 import axios from 'axios'
 import { Button } from './Button';
-
+import { redirect, useNavigate } from 'react-router-dom';
 let validEmail = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
 let validPwd = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*[@$!%*?&]).{8,}$');
 let charMin = new RegExp('^.{8,}$');
@@ -10,7 +10,9 @@ let upp = new RegExp('^(?=.*?[A-Z])');
 let low = new RegExp('^(?=.*?[a-z])');
 let num = new RegExp('^(?=.*?[0-9])'); 
 let sym = new RegExp('^(?=.*[@$!%*?&])');
-
+const auth = axios.create({
+  baseURL: 'http://localhost:3001'
+});
 function Login({type}) {
   const [cred, setCred] = useState({});
   const [pVis, setPVis] = useState(false);
@@ -23,9 +25,9 @@ function Login({type}) {
   const [lowE, setLowE] = useState(false);
   const [numE, setNumE] = useState(false);
   const [symE, setSymE] = useState(false);
-  const pwdRef = useRef(false);
   const [pwdFoc, setPwdFoc] = useState(false);
-
+  const [signFail, setSignFail] = useState(false);
+  const nav = useNavigate();
   if(!type) type = "login";
 
   const handleInput = (event) => {
@@ -61,22 +63,20 @@ function Login({type}) {
     
   }
 
-  useEffect(() => {
-    console.log("hey");
-    if(document.activeElement.id === pwdRef.current)
-      setPwdFoc(true);
-    else
-    setPwdFoc(false);
-    }, []);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setEmailErr(false);
     setPwdErr(false);
     setCPwdErr(false);
+    setSignFail(false);
     if(!validEmail.test(cred.user)) {
       setEmailErr(true);
       document.getElementById("user").focus();
+      return;
+    }
+    if(!cred.pwd && type === "login") {
+      setPwdErr(true);
+      document.getElementById("pwd").focus();
       return;
     }
     if(!validPwd.test(cred.pwd) & type === "sign-up") {
@@ -103,13 +103,36 @@ function Login({type}) {
       cred.cpwd = "";
       return;
     }
-    axios.post("http://localhost:3001/", {cred})
-    .then((response) => console.log(response))
-    setCred({
-      user: "",
-      pwd: "",
-      cpwd:""
-    })
+    switch(type) {
+      case "login":
+        setCred({
+          user: "",
+          pwd: ""
+        });
+        break;
+      case "sign-up":
+        auth.post("/sign-up", {cred})
+        .then((response) => {
+          console.log("hey");
+          nav("/login");
+        })
+        .catch((error) => {
+          setSignFail(true);
+        })
+        setCred({
+          user: "",
+          pwd: "",
+          cpwd:""
+        })
+        break;
+      case "forgot":
+        setCred({
+          user: "",
+        });
+        break;
+      default:
+        return;
+    }
   }
   switch(type) {
     case "login":
@@ -118,7 +141,9 @@ function Login({type}) {
           <div className='login'>
             <h2>SIGN INTO YOUR ACCOUNT</h2>
             <form onSubmit={handleSubmit}>
+                <p align="left">{emailErr && "Please enter a valid email"}</p>
                 <input className="login-input" onChange={handleInput} type="text" value={cred.user} id="user" name="user" placeholder='Your Email'/>
+                <p align="left">{pwdErr && "Please enter a password"}</p>
                 <input className="login-input" onChange={handleInput} type="password" value={cred.pwd} id="pwd" name="pwd" placeholder='Your Password'/>
                 <div className="show-btns" >
                   <Button className="btn" onClick={() => showPwd("pwd")} buttonSize="btn--medium" buttonStyle="btn--transparent">{pVis ? "Hide" : "Show"}</Button>
@@ -140,7 +165,7 @@ function Login({type}) {
             <div className='login'>
             <h2>CREATE YOUR ACCOUNT</h2>
             <form onSubmit={handleSubmit}>
-                <p align="left">{emailErr && "Please enter a valid email"}</p>
+                <p align="left">{signFail ? "Account with this email already exists" : emailErr && "Please enter a valid email"}</p>
                 <input className="login-input" onChange={handleInput} type="text" value={cred.user} id="user" name="user" placeholder='Your Email'/><br></br>
                 <p align="left">{pwdErr && "Please enter a valid password"}</p>
                 <input className="login-input" onFocus={() => {setPwdFoc(true)}} onBlur={() => {setPwdFoc(false)}} onChange={handleInput} type="password" value={cred.pwd} id="pwd" name="pwd" placeholder='Your Password'/>

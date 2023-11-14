@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
 
 app.get('/', async(req, res) => {
     try {
-        const test = await pool.query("SELECT * from test;");
+        const test = await pool.query("SELECT * FROM test;");
         console.log(test.rows);
         //console.log("Hello World");
     } catch (error) {
@@ -28,6 +28,20 @@ app.post('/', async(req,res)=>{
     }
     catch {}
     
+})
+
+app.post('/sign-up', async(req,res) => {
+    const acc = req.body.cred;
+    
+    try {
+        const check = await pool.query("SELECT email FROM test WHERE email = $1", [acc.user]);
+        if(check.rowCount > 0)
+            throw new Error('EXISTS');
+        //const add = await pool.query("INSERT INTO test (email, pwd) VALUES($1, $2)", [acc.user, acc.pwd]);
+        res.status(201).send();
+    } catch (error) {
+        res.status(401).send();
+    }
 })
 app.listen(PORT, ()=>{
     console.log(`App is running on port ${PORT}`)
