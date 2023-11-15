@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: my-postgres
+    environment:
+      POSTGRES_PASSWORD: #OneHe@rtMcKinney#
+      POSTGRES_USER: postgres
+      POSTGRES_DB: OHMEGA
+  app:
+    image: my-node-app
+    ports:
+      - 13000:3000

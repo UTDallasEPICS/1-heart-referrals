@@ -5,7 +5,8 @@ const pool = require('./db')
 //routes 
 app.use(express.json())
 app.get('/', async(req,res)=>{
-    res.send("Hello Yuh")
+    const data = await pool.query('SELECT * FROM admin') // selects all admins
+    res.status(200).send({data: data.rows})
 })
 app.post('/hi',async (req,res)=>{
     const {name,location}=req.body
