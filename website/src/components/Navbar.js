@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Sidebar from './Sidebar';
 function Navbar() {
@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src="/images/ohm-logo.jpg" to="/" alt="" height="60px"></img>
+            <img src="/images/ohm-logo.jpg" to="/" alt="" height="80px"></img>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -55,7 +55,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Contact 
+                Contact
               </Link>
             </li>
 

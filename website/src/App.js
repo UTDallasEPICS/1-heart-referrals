@@ -22,7 +22,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/login' exact Component={LoginPage}/>
+          <Route path='/login' exact element={<LoginPage/>}/>
           <Route path='/' exact element={defaultPage(Home)} />
           <Route path='/services'  />
           <Route path='/products'  />

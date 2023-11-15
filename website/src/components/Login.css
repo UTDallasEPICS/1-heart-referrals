@@ -90,7 +90,7 @@
     outline: 2px solid #b41212;
 }
 
-.login > form > input[type=submit]:hover {
+.login > form > input[type=submit]:hover, input[type=submit]:focus {
     background-color: white;
     outline: 2px solid #b41212;
     color: #b41212;
@@ -102,20 +102,23 @@
     color: #b41212;
     text-decoration: none;
     margin-bottom: 10;
+    outline-width: 0px;
 }
 
-.login > a:hover {
+.login > a:hover, a:focus {
     text-decoration: underline;
 }
 
 .login-btns {
     display: flex;
     justify-content: center;
+    outline: 0px transparent;
 }
 .login-btns .btn {
     background-color: transparent;
     color: #b41212;
     width: fit-content;
+    outline: 0px transparent;
 }
 
 .show-btns {
@@ -130,6 +133,6 @@
     color: #b41212;
 }
 
-.login-btns .btn:hover {
+.login-btns .btn:hover, .btn:focus {
     filter:drop-shadow(0px 0px 15px #000000);
 }
