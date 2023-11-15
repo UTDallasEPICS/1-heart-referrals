@@ -3,7 +3,7 @@ import React from 'react';
 export const InboundReferrals = () => {
   return (
     <div className='inboundReferrals'>
-      <h1>INBOUND REFERRALS</h1>
+      <h1>INBOUND REFERRALS/scnddsvudvjdsjjsdbjcdsjcsdj</h1>
     </div>
   );
 };

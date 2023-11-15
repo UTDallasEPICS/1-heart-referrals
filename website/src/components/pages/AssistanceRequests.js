@@ -5,6 +5,8 @@ export const AssistanceRequests = () => {
   return (
     <div className='filter-bar'>
       <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
+      <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
+
       <body> hjfckushdhfcsihfcisehfjcsjdhckufbdvjkdf </body>
     </div>
   );
@@ -12,9 +14,13 @@ export const AssistanceRequests = () => {
 
 export const AssistanceAction = () => {
   return (
-    <div className='filter-bar'>
-      <h1>ASSISTANCE REQUESTS/Assistance Action sdhjgcdhsdcshj dsshdshgdgshys</h1>
-    </div>
+    console.log("hello"),
+    <h1>hiiii</h1>
+    // <div className='filter-bar'>
+    //   <h1>ASSISTANCE REQUESTS/Assistance Action sdhjgcdhsdcshj dsshdshgdgshys</h1>
+    //   <div>ASSISTANCE REQUESTS/Assistance Action sdhjgcdhsdcshj dsshdshgdgshys </div>
+
+    // </div>
   );
 };
 
@@ -33,4 +39,5 @@ export const Processed = () => {
     </div>
   );
 };
+
 

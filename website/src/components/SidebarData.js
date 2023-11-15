@@ -7,7 +7,7 @@ import * as RiIcons from 'react-icons/ri';
 export const SidebarData = [
   {
     title: 'INBOUND REFERRALS',
-    path: './inboundReferrals',
+    path: '/inboundReferrals',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -15,12 +15,12 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Needs Action',
-        path: './inboundReferrals/inboundAction',
+        path: '/inboundReferrals/inboundAction',
         icon: <IoIcons.IoIosPaper />
       },
       {
         title: 'In Review',
-        path: './inboundReferrals/inReview',
+        path: '/inboundReferrals/inReview',
         icon: <IoIcons.IoIosPaper />
       }
     ]
@@ -28,7 +28,7 @@ export const SidebarData = [
 
   {
     title: 'ASSISTANCE REQUESTS',
-    path: './assistanceRequests',
+    path: '/assistanceRequestss',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -36,7 +36,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Needs Action',
-        path: './assistanceRequests/assistanceAction',
+        path: '/assistanceRequests/assistanceAction',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
 
@@ -51,7 +51,7 @@ export const SidebarData = [
       },
       {
         title: 'Processed',
-        path: './assistanceRequests/processed',
+        path: '/assistanceRequests/processed',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
 
@@ -61,24 +61,24 @@ export const SidebarData = [
   
   {
     title: 'INTERNAL CASES',
-    path: './internalCases',
+    path: '/internalCases',
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
       {
         title: 'Open',
-        path: './internalCases/Open',
+        path: '/internalCases/Open',
         cName: 'sub-nav'
       },
       {
         title: 'Close',
-        path: './internalCases/Closed',
+        path: '/internalCases/Closed',
         cName: 'sub-nav'
       },
       {
         title: 'All',
-        path: './internalCases/All',
+        path: '/internalCases/All',
         cName: 'sub-nav'
       },
     ]
@@ -86,7 +86,7 @@ export const SidebarData = [
   
   {
     title: 'OUTBOUND REFERRALS',
-    path: './outbound',
+    path: '/outbound',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -95,7 +95,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Drafts',
-        path: './outbound/drafts',
+        path: '/outbound/drafts',
         icon: <IoIcons.IoIosPaper />
       },
       {
@@ -105,27 +105,27 @@ export const SidebarData = [
       },
       {
         title: 'Recalled',
-        path: './outbound/recalled',
+        path: '/outbound/recalled',
         icon: <IoIcons.IoMdHelpCircle />
       },
       {
         title: 'Need Actions',
-        path: './outbound/needActions',
+        path: '/outbound/needActions',
         icon: <IoIcons.IoMdHelpCircle />
       },
       {
         title: 'In Review',
-        path: './outbound/inReview',
+        path: '/outbound/inReview',
         icon: <IoIcons.IoMdHelpCircle />
       },
       {
         title: 'Closed',
-        path: './outbound/closed',
+        path: '/outbound/closed',
         icon: <IoIcons.IoMdHelpCircle />
       },
       {
         title: 'All',
-        path: './outbound/all',
+        path: '/outbound/all',
         icon: <IoIcons.IoMdHelpCircle />
       },
 
@@ -141,17 +141,17 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Open',
-        path: './externalCases/externalOpen',
+        path: '/externalCases/externalOpen',
         cName: 'sub-nav'
       },
       {
         title: 'Close',
-        path: './externalCases/externalClosed',
+        path: '/externalCases/externalClosed',
         cName: 'sub-nav'
       },
       {
         title: 'All',
-        path: './externalCases/externalAll',
+        path: '/externalCases/externalAll',
         cName: 'sub-nav'
       },
     ]
@@ -159,24 +159,24 @@ export const SidebarData = [
 
   {
     title: 'OUT OF NETWORK CASES',
-    path: './outOfNetworkCases',
+    path: '/outOfNetworkCases',
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
       {
         title: 'Open',
-        path: './outOfNetworkCases/outOpen',
+        path: '/outOfNetworkCases/outOpen',
         cName: 'sub-nav'
       },
       {
         title: 'Close',
-        path: './outOfNetworkCases/outClosed',
+        path: '/outOfNetworkCases/outClosed',
         cName: 'sub-nav'
       },
       {
         title: 'All',
-        path: './outOfNetworkCases/outAll',
+        path: '/outOfNetworkCases/outAll',
         cName: 'sub-nav'
       },
     ]

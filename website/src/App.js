@@ -36,39 +36,40 @@ function App() {
 
         <Sidebar>
         <Routes>
-          <Route path='/inboundReferrals' exact element={<InboundReferrals/>} />
-          <Route path='/inboundReferrals/inboundAction' exact element={<InboundAction/>} />
-          <Route path='/inboundReferrals/inReview' exact Component={InReview} />
+          <Route path='./inboundReferrals' exact component={InboundReferrals} />
+          <Route path='/inboundReferrals/inboundAction' exact component={InboundAction} />
+          <Route path='/inboundReferrals/inReview' exact component={InReview} />
 
-          <Route path='/assistanceRequests' exact Component={AssistanceRequests} />
-          <Route path='/assistanceRequests/AssistanceAction' exact Component={AssistanceAction} />
-          <Route path='/assistanceRequests/closed' exact Component={Closed} />
-          <Route path='/assistanceRequests/processed' exact Component={Processed} />
+          
+          <Route path='/assistanceRequests' exact component={AssistanceRequests} />
+          <Route path='/assistanceRequests/assistanceAction'  exact component={AssistanceAction}/>
+          <Route path='/assistanceRequests/closed' exact component={Closed} />
+          <Route path='/assistanceRequests/processed' exact component={Processed} />
 
-          <Route path='/internalCases' exact Component ={InternalCases } />
-          <Route path='/internalCases/Open' exact Component ={OpenCase} />
-          <Route path='/internalCases/Closed' exact Component ={ClosedCase} />
-          <Route path='/internalCases/All' exact Component ={AllCase} />
+          <Route path='/internalCases' exact component ={InternalCases } />
+          <Route path='/internalCases/Open' exact component ={OpenCase} />
+          <Route path='/internalCases/Closed' exact component ={ClosedCase} />
+          <Route path='/internalCases/All' exact component ={AllCase} />
 
-          <Route path='/outbound' exact Component ={OutboundReferrals } />
-          <Route path='/outbound/drafts' exact Component ={OutDrafts} />
-          <Route path='/outbound/rejected' exact Component ={OutRejected} />
-          <Route path='/outbound/recalled' exact Component ={OutRecalled} />
-          <Route path='/outbound/needActions' exact Component ={OutActions} />
-          <Route path='/outbound/inReview' exact Component ={OutReview} />
-          <Route path='/outbound/closed' exact Component ={OutClosed} />
-          <Route path='/outbound/all' exact Component ={OutAll} />
+          <Route path='/outbound' exact component ={OutboundReferrals } />
+          <Route path='/outbound/drafts' exact component ={OutDrafts} />
+          <Route path='/outbound/rejected' exact component ={OutRejected} />
+          <Route path='/outbound/recalled' exact component ={OutRecalled} />
+          <Route path='/outbound/needActions' exact component ={OutActions} />
+          <Route path='/outbound/inReview' exact component ={OutReview} />
+          <Route path='/outbound/closed' exact component ={OutClosed} />
+          <Route path='/outbound/all' exact component ={OutAll} />
 
 
-          <Route path='/externalCases' exact Component ={ExternalCases } />
-          <Route path='/externalCases/externalOpen' exact Component ={ExOpenCase} />
-          <Route path='/externalCases/externalClosed' exact Component ={ExClosedCase} />
-          <Route path='/externalCases/externalAll' exact Component ={ExAllCase} />
+          <Route path='/externalCases' exact component ={ExternalCases } />
+          <Route path='/externalCases/externalOpen' exact component ={ExOpenCase} />
+          <Route path='/externalCases/externalClosed' exact component ={ExClosedCase} />
+          <Route path='/externalCases/externalAll' exact component ={ExAllCase} />
 
-          <Route path='/outOfNetworkCases' exact Component ={OutOfNetworkCasesCases } />
-          <Route path='/outOfNetworkCases/outOpen' exact Component ={OutOpenCase} />
-          <Route path='/outOfNetworkCases/outClosed' exact Component ={OutClosedCase} />
-          <Route path='/outOfNetworkCases/outAll' exact Component ={OutAllCase} />
+          <Route path='/outOfNetworkCases' exact component ={OutOfNetworkCasesCases } />
+          <Route path='/outOfNetworkCases/outOpen' exact component ={OutOpenCase} />
+          <Route path='/outOfNetworkCases/outClosed' exact component ={OutClosedCase} />
+          <Route path='/outOfNetworkCases/outAll' exact component ={OutAllCase} />
 
         </Routes>
       </Sidebar>

@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
+// import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 import { Button } from './Button';
 
-const Nav = styled.div`
-  background: #800000;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: "Gill Sans", sans-serif;
-`;
+// const Nav = styled.div`
+//   background: #800000;
+//   height: 80px;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   font-family: "Gill Sans", sans-serif;
+// `;
 
 const NavIcon = styled(Link)`
   margin-left: 2rem;
@@ -84,7 +84,7 @@ const Sidebar = () => {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                Dashboard
               </Link>
             </li>
             <li className='nav-item'>
@@ -102,9 +102,20 @@ const Sidebar = () => {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Contact 
+                Clients
               </Link>
             </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/products'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                My Network
+              </Link>
+            </li>
+
 
             <li>
               <Link
@@ -121,12 +132,10 @@ const Sidebar = () => {
         </div>
       </nav>
     
-        <SidebarNav sidebar={true}>
+      <SidebarNav sidebar={true}>
           <SidebarWrap>
             <NavIcon to='#'>
-              {/* <AiIcons.AiOutlineClose onClick={showSidebar} /> */}
-              {/* <h1>United US</h1> */}
-
+            <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
