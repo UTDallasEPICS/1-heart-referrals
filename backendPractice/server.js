@@ -5,6 +5,9 @@ const bcrypt = require('bcryptjs');
 const PORT = 3001;
 const pool = require('./db')
 const axios = require("axios").create({ baseUrl: "http://localhost:3001/" });
+// const { PrismaClient } = require("@prisma/client");
+// const prisma = new PrismaClient();
+
 //routes 
 app.use(express.json())
 app.use(cors());
@@ -42,6 +45,7 @@ app.post('/sign-up', async (req, res) => {
     console.log(hpwd);
     try {
         const check = await pool.query("SELECT email FROM test WHERE email = $1", [acc.user]);
+        //prisma.admin.findFirst({where: {email: acc.user});
         console.log(check);
         if (check.rowCount > 0)
             throw new Error('EXISTS');
