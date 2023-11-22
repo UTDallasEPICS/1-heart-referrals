@@ -1,0 +1,18 @@
+.our-team {
+    background-color: lightgray;
+    padding-bottom: 0.5in;
+}
+  
+.our-team > p {
+text-align: center;
+font-size: 1.3rem;
+margin-bottom: 30px;
+margin-top: 20px; 
+}
+
+.our-team > p > b {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 20px; 
+    }

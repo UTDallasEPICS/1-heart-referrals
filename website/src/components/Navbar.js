@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -45,12 +45,52 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                About Us
+                About OHM
+                <NavLink>
+                  <ul className = 'dropdown-menu'>
+                  <li>
+                    <NavLink
+                      to='/about-us-container/history'
+                      className='dropdown-links'
+                      onClick={closeMobileMenu}
+                    >
+                      History
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to='/about-us-container/faq'
+                      className='dropdown-links'
+                      onClick={closeMobileMenu}
+                    >
+                      FAQ
+                    </NavLink>
+                  </li>
+                  </ul>
+                </NavLink>
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='/about'
+                to='/our-team'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Our Team
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/network-partners'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Network Partners
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/contact'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -68,7 +108,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline' to="login">SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline' to="/login">SIGN UP</Button>}
         </div>
       </nav>
     </>

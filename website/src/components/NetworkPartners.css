@@ -1,0 +1,41 @@
+.network-partners {
+    background-color: lightgray;
+    padding-bottom: 0.5in;
+    text-align: center;
+}
+
+.network-content {
+    margin-top: 0.5in;
+    font-size: 2rem;
+}
+  
+.partners-grid {
+padding-top: 0.5in;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 20px; 
+}
+
+.partner-item {
+text-align: center;
+}
+
+.partner-item img {
+max-width: 100%; 
+}
+
+.partner-item button {
+margin-top: 10px;
+width: 120px; 
+height: 80px; 
+background-color: rgb(227, 37, 37);
+color: black;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.partner-item button:hover {
+background-color: red;
+color: white;
+}

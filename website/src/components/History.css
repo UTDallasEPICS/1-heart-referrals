@@ -1,0 +1,33 @@
+.history {
+    background-color: lightgray;
+    padding-bottom: 0.5in;
+}
+  
+.history-content > h1 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 30px;
+margin-top: 20px; 
+}
+
+.history-content {
+max-width: 800px;
+margin: 0 auto; 
+}
+
+.history-item {
+margin-bottom: 40px;
+}
+
+.history-item > p {
+text-align: left;
+font-size: 1.3rem;
+margin-top: 10px;
+margin-bottom: 10px; 
+}
+
+.history-item > p > b {
+display: block; 
+font-size: 1.3rem; 
+margin-top: 40px;
+}
