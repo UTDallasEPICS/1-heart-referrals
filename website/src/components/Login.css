@@ -70,7 +70,7 @@
     margin-left: calc(.1 * var(--width));
 }
 
-.login > form > input[type=text], input[type=password] {
+.login > form > input[type=text], input[type=password], input[type=tel] {
     background-color: #ebebeb;
     padding-left: 3%;
     transition: outline .1s;

@@ -5,8 +5,8 @@ const bcrypt = require('bcryptjs');
 const PORT = 3001;
 const pool = require('./db')
 const axios = require("axios").create({ baseUrl: "http://localhost:3001/" });
-// const { PrismaClient } = require("@prisma/client");
-// const prisma = new PrismaClient();
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
 //routes 
 app.use(express.json())
@@ -18,16 +18,29 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/', async (req, res) => {
+    try {
+        const test = await prisma.admin.findMany();
+        console.log(test);
+    } catch (error) {
+
+    }
+})
 
 app.post('/login', async (req, res) => {
     const acc = req.body.cred;
     try {
-        const check = await pool.query("SELECT * FROM test WHERE email = $1", [acc.user]);
+        //const check = await pool.query("SELECT * FROM  WHERE email = $1", [acc.user]);
+        const check = await prisma.admin.findFirst({
+            where: {
+                Email: acc.user
+            },
+        })
         console.log(check);
-        if (check.rowCount === 0)
+        if (!check)
             throw new Error('WRONG');
 
-        if (await bcrypt.compare(acc.pwd, check.rows[0].pwd))
+        if (await bcrypt.compare(acc.pwd, check.Password))
             res.status(201).send();
         else
             throw new Error('WRONG');
@@ -40,16 +53,28 @@ app.post('/login', async (req, res) => {
 
 app.post('/sign-up', async (req, res) => {
     const acc = req.body.cred;
-    console.log(acc);
     const hpwd = await bcrypt.hash(acc.pwd, 10);
-    console.log(hpwd);
     try {
-        const check = await pool.query("SELECT email FROM test WHERE email = $1", [acc.user]);
-        //prisma.admin.findFirst({where: {email: acc.user});
+        //const check = await pool.query("SELECT email FROM test WHERE email = $1", [acc.user]);
+        const check = await prisma.admin.findFirst({
+            where: {
+                Email: acc.user
+            },
+        });
         console.log(check);
-        if (check.rowCount > 0)
+        if (check)
             throw new Error('EXISTS');
-        const add = await pool.query("INSERT INTO test (email, pwd) VALUES($1, $2)", [acc.user, hpwd]);
+        //const add = await pool.query("INSERT INTO test (email, pwd) VALUES($1, $2)", [acc.user, hpwd]);
+        const add = await prisma.admin.create({
+            data: {
+                FirstName: acc.fname,
+                LastName: acc.lname,
+                WorkTitle: 'worker',
+                Phone: acc.phone,
+                Email: acc.user,
+                Password: hpwd
+            }
+        })
         res.status(201).send();
     } catch (error) {
         res.status(401).send();
