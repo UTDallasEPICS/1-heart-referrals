@@ -122,9 +122,10 @@ function Login({ type }) {
     switch (type) {
       case "login":
         auth.post("/login", { cred })
-          .then(() => {
-            const token = cred;
-            sessionStorage.setItem('token', JSON.stringify(token));
+          .then((response) => {
+            const token = response.data;
+
+            sessionStorage.setItem('token', token);
             nav("/Sidebar");
           })
           .catch(() => {

@@ -10,7 +10,7 @@ const HeroSection = () => {
             {/* <h1>We exists to coordinate the WHOLE community to maximize well-being in daily life, and respond to and recover from any community crisis.</h1> */}
             <p>GET A REFERRAL TODAY !</p>
             <div className="hero-btns">
-                <Button className='btns' to="login" buttonStyle='btn--primary'
+                <Button className='btns' to="/login" buttonStyle='btn--primary'
                     buttonSize='btn--large'
                 >
                     LET'S START

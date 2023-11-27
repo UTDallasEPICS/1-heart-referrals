@@ -9,9 +9,9 @@ const SidebarLink = styled(Link)`
   align-items: center;
   padding: 20px;
   list-style: none;
-  height: 60px;
+  height: 40px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
 
   &:hover {
     background: #252831;
@@ -21,18 +21,18 @@ const SidebarLink = styled(Link)`
 `;
 
 const SidebarLabel = styled.span`
-  margin-left: 16px;
+  margin-left: 14px;
 `;
 
 const DropdownLink = styled(Link)`
   background: #414757;
-  height: 60px;
+  height: 35px;
   padding-left: 3rem;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #f5f5f5;
-  font-size: 18px;
+  font-size: 13px;
 
   &:hover {
     background: #632ce4;
@@ -56,8 +56,8 @@ const SubMenu = ({ item }) => {
           {item.subNav && subnav
             ? item.iconOpened
             : item.subNav
-            ? item.iconClosed
-            : null}
+              ? item.iconClosed
+              : null}
         </div>
       </SidebarLink>
       {subnav &&

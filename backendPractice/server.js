@@ -21,7 +21,6 @@ app.use(function (req, res, next) {
 app.get('/', async (req, res) => {
     try {
         const test = await prisma.admin.findMany();
-        console.log(test);
     } catch (error) {
 
     }
@@ -36,16 +35,21 @@ app.post('/login', async (req, res) => {
                 Email: acc.user
             },
         })
-        console.log(check);
         if (!check)
             throw new Error('WRONG');
 
-        if (await bcrypt.compare(acc.pwd, check.Password))
-            res.status(201).send();
+        if (await bcrypt.compare(acc.pwd, check.Password)) {
+
+            res.status(201).json(JSON.stringify(
+                check,
+                (key, value) => (typeof value === 'bigint' ? value.toString() : value) // return everything else unchanged
+            ));
+        }
         else
             throw new Error('WRONG');
     }
     catch (error) {
+        console.log(error);
         res.status(401).send();
     }
 
@@ -61,7 +65,6 @@ app.post('/sign-up', async (req, res) => {
                 Email: acc.user
             },
         });
-        console.log(check);
         if (check)
             throw new Error('EXISTS');
         //const add = await pool.query("INSERT INTO test (email, pwd) VALUES($1, $2)", [acc.user, hpwd]);

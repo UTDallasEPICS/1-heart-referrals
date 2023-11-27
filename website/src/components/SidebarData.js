@@ -6,65 +6,83 @@ import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'Overview',
-    path: './overview',
+    title: 'INBOUND REFERRALS',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {
-        title: 'Users',
-        path: './overview/users',
+        title: 'Needs Action',
+        path: '/inboundReferrals/inboundAction',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'Revenue',
-        path: './overview/revenue',
+        title: 'In Review',
+        path: '/inboundReferrals/inReview',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
+
   {
-    title: 'Reports',
-    path: './reports',
-    icon: <IoIcons.IoIosPaper />,
+    title: 'ASSISTANCE REQUESTS',
+    icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {
-        title: 'Reports',
-        path: './reports/reports1',
+        title: 'Needs Action',
+        path: '/assistanceRequests/assistanceAction',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
+
       },
+
       {
-        title: 'Reports 2',
-        path: './reports/reports2',
+        title: 'Closed',
+        path: './assistanceRequests/closed',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
+
       },
       {
-        title: 'Reports 3',
-        path: './reports/reports3',
-        icon: <IoIcons.IoIosPaper />
+        title: 'Processed',
+        path: '/assistanceRequests/processed',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+
       }
     ]
   },
+
   {
-    title: 'Products',
-    path: './products',
-    icon: <FaIcons.FaCartPlus />
+    title: 'INTERNAL CASES',
+    icon: <FaIcons.FaCartPlus />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: 'Open',
+        path: '/internalCases/Open',
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Close',
+        path: '/internalCases/Closed',
+        cName: 'sub-nav'
+      },
+      {
+        title: 'All',
+        path: '/internalCases/All',
+        cName: 'sub-nav'
+      },
+    ]
   },
+
   {
-    title: 'Team',
-    path: './team',
-    icon: <IoIcons.IoMdPeople />
-  },
-  {
-    title: 'Messages',
-    path: './messages',
+    title: 'OUTBOUND REFERRALS',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -72,22 +90,95 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: 'Message 1',
-        path: './messages/message1',
+        title: 'Drafts',
+        path: '/outbound/drafts',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'Message 2',
-        path: './messages/message2',
+        title: 'Rejected',
+        path: './outbound/rejected',
         icon: <IoIcons.IoIosPaper />
-      }
+      },
+      {
+        title: 'Recalled',
+        path: '/outbound/recalled',
+        icon: <IoIcons.IoMdHelpCircle />
+      },
+      {
+        title: 'Need Actions',
+        path: '/outbound/needActions',
+        icon: <IoIcons.IoMdHelpCircle />
+      },
+      {
+        title: 'In Review',
+        path: '/outbound/inReview',
+        icon: <IoIcons.IoMdHelpCircle />
+      },
+      {
+        title: 'Closed',
+        path: '/outbound/closed',
+        icon: <IoIcons.IoMdHelpCircle />
+      },
+      {
+        title: 'All',
+        path: '/outbound/all',
+        icon: <IoIcons.IoMdHelpCircle />
+      },
+
     ]
   },
+
   {
-    title: 'Support',
-    path: './support',
-    icon: <IoIcons.IoMdHelpCircle />
-  }
+    title: 'EXTERNAL CASES',
+    icon: <FaIcons.FaCartPlus />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: 'Open',
+        path: '/externalCases/externalOpen',
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Close',
+        path: '/externalCases/externalClosed',
+        cName: 'sub-nav'
+      },
+      {
+        title: 'All',
+        path: '/externalCases/externalAll',
+        cName: 'sub-nav'
+      },
+    ]
+  },
+
+  {
+    title: 'OUT OF NETWORK CASES',
+    icon: <FaIcons.FaCartPlus />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: 'Open',
+        path: '/outOfNetworkCases/outOpen',
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Close',
+        path: '/outOfNetworkCases/outClosed',
+        cName: 'sub-nav'
+      },
+      {
+        title: 'All',
+        path: '/outOfNetworkCases/outAll',
+        cName: 'sub-nav'
+      },
+    ]
+  },
+
+
 ];
+
+
 
 export default SidebarData;
