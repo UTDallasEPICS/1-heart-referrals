@@ -122,9 +122,10 @@ function Login({ type }) {
     switch (type) {
       case "login":
         auth.post("/login", { cred })
-          .then(() => {
-            const token = cred;
-            sessionStorage.setItem('token', JSON.stringify(token));
+          .then((response) => {
+            const token = response.data;
+
+            sessionStorage.setItem('token', token);
             nav("/Sidebar");
           })
           .catch(() => {
@@ -144,6 +145,9 @@ function Login({ type }) {
             setSignFail(true);
           })
         setCred({
+          fname: "",
+          lname: "",
+          phone: "",
           user: "",
           pwd: "",
           cpwd: ""
@@ -190,6 +194,9 @@ function Login({ type }) {
             <div className='login'>
               <h2>CREATE YOUR ACCOUNT</h2>
               <form onSubmit={handleSubmit}>
+                <input className="login-input" tabIndex={1} onChange={handleInput} type="text" value={cred.fname} id="fname" name="fname" placeholder='Your First Name' required /><br></br>
+                <input className="login-input" tabIndex={1} onChange={handleInput} type="text" value={cred.lname} id="lname" name="lname" placeholder='Your Last Name' required /><br></br>
+                <input className="login-input" tabIndex={1} onChange={handleInput} type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={cred.phone} id="phone" name="phone" placeholder='Your Phone Number' required /><br></br>
                 <p align="left">{signFail ? "Account with this email already exists" : emailErr && "Please enter a valid email"}</p>
                 <input className="login-input" tabIndex={1} onChange={handleInput} type="text" value={cred.user} id="user" name="user" placeholder='Your Email' /><br></br>
                 <p align="left">{pwdErr && "Please enter a valid password"}</p>

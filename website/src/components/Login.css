@@ -4,8 +4,8 @@
     position: absolute;
     background-color: #ebebeb;
     margin: 0 0 0 0;
-    height: 100%;
     width: 100%;
+    height: 105%;
     
 }
 .login-float {
@@ -70,7 +70,7 @@
     margin-left: calc(.1 * var(--width));
 }
 
-.login > form > input[type=text], input[type=password] {
+.login > form > input[type=text], input[type=password], input[type=tel] {
     background-color: #ebebeb;
     padding-left: 3%;
     transition: outline .1s;
