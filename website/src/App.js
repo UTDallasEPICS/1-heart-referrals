@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
 import ForgotPage from './components/pages/ForgotPage';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (

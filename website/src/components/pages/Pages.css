@@ -10,14 +10,39 @@
 
 .filter-bar
 {
+  margin: 2;
+  padding: 2;
+}
+
+.content-page{
   display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  
+  /* margin-top: 5px; */
+  margin-left: 250px;
+  margin-right: 6px;
+  min-height: 4rem;
+  background-color: rgb(244, 239, 237);
+
+  border: 0.2px solid;
 
 }
+
+.down-button
+{
+  background-color: #efe7e7;
+  color: #fff;
+  margin-top: 13px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+
+
+
+
+
+
+
 
 
 

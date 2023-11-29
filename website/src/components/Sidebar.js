@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 import { Button } from './Button';
-
+import "./Navbar.css"
 // const Nav = styled.div`
 //   background: #800000;
 //   height: 80px;
@@ -39,6 +39,7 @@ const SidebarNav = styled.nav`
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
   z-index: 10;
+  padding-top: 100px;
   font-family: "Gill Sans", sans-serif;
 `;
 
@@ -55,6 +56,12 @@ const Sidebar = () => {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  let location = useLocation();
+  const nav = useNavigate();
+  const ad = JSON.parse(sessionStorage.getItem("token"));
+  useEffect(() => {
+
+  }, [location]);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -69,74 +76,58 @@ const Sidebar = () => {
   }, []);
 
   window.addEventListener('resize', showButton);
-
+  if (location.pathname === '/' || location.pathname === '/login' || location.pathname === '/sign-up' || location.pathname === '/login/forgot')
+    return;
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src="/images/ohm-logo.jpg" to="/" alt="" height="60px"></img>
-          </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+        <nav className='navbar'>
+          <div className='navbar-container'>
+            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+              <img src="/images/ohm-logo.jpg" to="/" alt="" height="80px"></img>
+            </Link>
+            <div className='menu-icon' onClick={handleClick}>
+              <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            </div>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <li className='nav-item'>
+                <Link
+                  to='/products'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Clients
+                </Link>
+              </li>
+
+              <li className='nav-item'>
+                <Link
+                  to='/products'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  My Network
+                </Link>
+              </li>
+
+              <li className='nav-item'>
+                <div className="user-icon">
+                  {/* <h3>{ad.FirstName} {ad.LastName}</h3> */}
+                  <i className="fas fa-user"></i>
+                </div>
+              </li>
+
+
+            </ul>
+
+            {button && <Button onClick={() => {
+              sessionStorage.removeItem("token");
+            }} buttonStyle='btn--outline' to="login">Log out</Button>}
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Dashboard
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/Sidebar'
-                className='nav-links'
-                onClick={Sidebar}
-              >
-                Landing Page
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Clients
-              </Link>
-            </li>
+        </nav>
 
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                My Network
-              </Link>
-            </li>
-
-
-            <li>
-              <Link
-                to='/login'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign In
-              </Link>
-            </li>
-          </ul>
-
-          {button && <Button buttonStyle='btn--outline' to="login">Sign out</Button>}
-        </div>
-      </nav>
-    
-      <SidebarNav sidebar={true}>
+        <SidebarNav sidebar={true}>
           <SidebarWrap>
-            <NavIcon to='#'>
-            <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
