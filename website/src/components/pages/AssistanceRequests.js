@@ -15,7 +15,13 @@ export const AssistanceRequests = () => {
 export const AssistanceAction = () => {
   return (
     <div className="content-page">
-      <h1>Hello</h1>
+      <table>
+        <tr>
+          <th>CLIENT NAME</th>
+          <th>SERVICE TYPE</th>
+          <th>LAST UPDATED</th>
+        </tr>
+      </table>
     </div>
   );
 };
