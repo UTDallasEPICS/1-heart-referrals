@@ -42,7 +42,6 @@ app.post('/assist', async (req, res) => {
                 CreatedAt: true,
             },
         });
-        console.log(find);
         res.status(200).json(JSON.stringify(find));
     } catch (error) {
         console.log(error);
