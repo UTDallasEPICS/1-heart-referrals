@@ -1,5 +1,9 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(189, 18, 18) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(189, 18, 18) 70%
+  );
   height: 90px;
   width: 100%;
   display: flex;
@@ -27,12 +31,12 @@
 .user-icon > i {
   padding: 1rem;
   font-size: 1.5rem;
-  transition: font-size .2s;
+  transition: font-size 0.2s;
 }
 
 .user-icon > h3 {
   font-size: 1.2rem;
-  transition: font-size .2s;
+  transition: font-size 0.2s;
 }
 
 .user-icon:hover > i {

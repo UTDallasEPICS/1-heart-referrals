@@ -6,7 +6,7 @@ const app = axios.create({
   baseURL: 'http://localhost:3001'
 });
 
-const months = ["Jan", "feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
 export const AssistanceRequests = () => {
   return (
@@ -32,7 +32,6 @@ export const AssistanceAction = () => {
 
   data.map((item, index) => {
     item.CreatedAt = new Date(item.CreatedAt);
-    console.log(item.CreatedAt);
   })
   return (
     <div className="content-page">
@@ -46,7 +45,7 @@ export const AssistanceAction = () => {
         </thead>
         {data.map((item, index) => {
           return (
-            <tbody>
+            <tbody onClick={() => { console.log("hey") }}>
               <tr>
                 <td>{item.FirstName} {item.LastName}</td>
                 <td>{item.ServicesSeeking}</td>

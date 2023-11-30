@@ -7,6 +7,12 @@
   font-family: "Lato", sans-serif;
 }
 
+body {
+  background: #b8b8b8;
+  display: flex;
+  height: 100%;
+}
+
 .filter-bar {
   display: flex;
   height: 90vh;
@@ -18,16 +24,20 @@
 .content-page {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  width: calc(100vw - 250px);
   margin-top: 90px;
   margin-left: 250px;
+
   padding: 10px 10px;
-  min-height: calc(100vh - 90px);
-  background-color: #ffffff;
+  min-height: 100%;
+  background-color: #ebebeb;
 }
 
 .data-table {
   margin: 20px;
-  border: 1px solid #cccaca;
+  border: 2px solid #776e6e;
+  background: #ffffff;
   padding-left: 10px;
   border-collapse: collapse;
 }
@@ -36,8 +46,14 @@
   text-align: left;
 }
 
-.data-table > .data-table > tbody > tr > td {
-  border-top: 1px solid #cccaca;
-  border-bottom: 1px solid #cccaca;
-  padding: 10px 20px;
+.data-table > thead > tr > th {
+  text-align: left;
+  padding: 5px 0;
+  padding-left: 20px;
+}
+
+.data-table > tbody > tr > td {
+  border-top: 2px solid #776e6e;
+  border-bottom: 2px solid #776e6e;
+  padding: 20px 20px;
 }

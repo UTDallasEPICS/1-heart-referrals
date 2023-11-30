@@ -29,27 +29,28 @@ const NavIcon = styled(Link)`
 
 const SidebarNav = styled.nav`
   background: #800000;
+  position: fixed;
+  overflow-y: scroll;
   font-size: 2rem;
   width: 250px;
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
   top: 0;
+  
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-  transition: 350ms;
   z-index: 10;
   padding-top: 100px;
   font-family: "Gill Sans", sans-serif;
 `;
-
 const SidebarWrap = styled.div`
   width: 100%;
+  position: relative
 `;
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
-
+  console.log(window.innerHeight);
   const showSidebar = () => setSidebar(!sidebar);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
