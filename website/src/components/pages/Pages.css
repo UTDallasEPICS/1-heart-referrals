@@ -1,22 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
-
-.filter-bar
-{
+.filter-bar {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  
-
 }
 
 .content-page {
@@ -26,7 +22,22 @@
   margin-left: 250px;
   padding: 10px 10px;
   min-height: calc(100vh - 90px);
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
+.data-table {
+  margin: 20px;
+  border: 1px solid #cccaca;
+  padding-left: 10px;
+  border-collapse: collapse;
+}
 
+.data-table > thead {
+  text-align: left;
+}
+
+.data-table > .data-table > tbody > tr > td {
+  border-top: 1px solid #cccaca;
+  border-bottom: 1px solid #cccaca;
+  padding: 10px 20px;
+}

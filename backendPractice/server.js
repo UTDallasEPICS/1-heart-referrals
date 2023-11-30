@@ -12,7 +12,7 @@ const prisma = new PrismaClient();
 app.use(express.json())
 app.use(cors());
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
     next();
@@ -23,6 +23,29 @@ app.get('/', async (req, res) => {
         const test = await prisma.admin.findMany();
     } catch (error) {
 
+    }
+})
+
+app.post('/assist', async (req, res) => {
+    const con = req.body;
+    try {
+        const find = await prisma.client.findMany({
+            orderBy: {
+                CreatedAt: 'desc',
+            },
+            skip: con.page * 50,
+            take: 50,
+            select: {
+                FirstName: true,
+                LastName: true,
+                ServicesSeeking: true,
+                CreatedAt: true,
+            },
+        });
+        console.log(find);
+        res.status(200).json(JSON.stringify(find));
+    } catch (error) {
+        console.log(error);
     }
 })
 
@@ -65,6 +88,7 @@ app.post('/sign-up', async (req, res) => {
                 Email: acc.user
             },
         });
+        console.log(check);
         if (check)
             throw new Error('EXISTS');
         //const add = await pool.query("INSERT INTO test (email, pwd) VALUES($1, $2)", [acc.user, hpwd]);
@@ -80,9 +104,13 @@ app.post('/sign-up', async (req, res) => {
         })
         res.status(201).send();
     } catch (error) {
+        console.log(error);
         res.status(401).send();
     }
 })
+
+
+
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`)
 })
