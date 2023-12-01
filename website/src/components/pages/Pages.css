@@ -14,11 +14,58 @@ body {
 }
 
 .filter-bar {
+  padding: 15px 20px;
   display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
+  height: 70px;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 2px solid #776e6e;
   font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-bar > p {
+  font-size: 1rem;
+  padding: 10px 15px;
+  margin-left: 20%;
+}
+
+.filter-btn > i {
+  font-size: 1.2rem;
+  transform: rotate(180deg);
+}
+
+.filter-btn {
+  transition: background-color 0.2s, border-color 0.2s;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  color: #484444;
+  border: 2px solid #776e6e89;
+  text-align: left;
+  padding: 10px 15px;
+  width: 30%;
+  margin-right: 2%;
+}
+
+.filter-btn:hover,
+.page-btn:hover {
+  background-color: #c2bebe;
+  border-color: #5b545489;
+}
+
+.page-btn {
+  background: transparent;
+  color: #484444;
+  border: 2px solid #776e6e89;
+  padding: 10px 15px;
+  transform: rotate(-90deg);
+  width: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .content-page {
@@ -27,16 +74,15 @@ body {
   position: absolute;
   width: calc(100vw - 250px);
   margin-top: 90px;
-  margin-left: 250px;
-
-  padding: 10px 10px;
+  left: 250px;
   min-height: 100%;
+  padding: 0 0;
   background-color: #ebebeb;
 }
 
 .data-table {
   margin: 20px;
-  border: 2px solid #776e6e;
+  /*border: 2px solid #776e6e;*/
   background: #ffffff;
   padding-left: 10px;
   border-collapse: collapse;
@@ -44,6 +90,9 @@ body {
 
 .data-table > thead {
   text-align: left;
+  background: rgb(189, 18, 18);
+  color: #ffffff;
+  border: 2px solid #776e6e;
 }
 
 .data-table > thead > tr > th {
@@ -52,8 +101,17 @@ body {
   padding-left: 20px;
 }
 
+.data-table > tbody {
+  border: 2px solid #776e6e;
+}
+
+.data-table > tbody:hover {
+  border-left-color: #bd1212;
+  box-shadow: inset 5px 0 0 0 #bd1212;
+  background-color: #fbe0e0;
+  cursor: pointer;
+}
+
 .data-table > tbody > tr > td {
-  border-top: 2px solid #776e6e;
-  border-bottom: 2px solid #776e6e;
   padding: 20px 20px;
 }

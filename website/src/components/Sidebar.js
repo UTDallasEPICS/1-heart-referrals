@@ -8,6 +8,7 @@ import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 import { Button } from './Button';
 import "./Navbar.css"
+import "./pages/Pages.css"
 // const Nav = styled.div`
 //   background: #800000;
 //   height: 80px;
@@ -37,7 +38,7 @@ const SidebarNav = styled.nav`
   display: flex;
   justify-content: center;
   top: 0;
-  
+  margin-right: -10px;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   z-index: 10;
   padding-top: 100px;
@@ -127,14 +128,14 @@ const Sidebar = () => {
           </div>
         </nav>
 
-        <SidebarNav sidebar={true}>
+        <SidebarNav sidebar={true} className='sidebar'>
           <SidebarWrap>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
           </SidebarWrap>
         </SidebarNav>
-      </IconContext.Provider>
+      </IconContext.Provider >
     </>
   );
 };

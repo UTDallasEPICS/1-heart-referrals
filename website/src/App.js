@@ -12,7 +12,7 @@ import LoginPage from './components/pages/LoginPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
 import ForgotPage from './components/pages/ForgotPage';
-
+//Hello
 function App() {
 
   return (

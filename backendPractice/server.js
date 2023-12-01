@@ -26,6 +26,15 @@ app.get('/', async (req, res) => {
     }
 })
 
+app.get('/assist', async (req, res) => {
+    try {
+        const add = await prisma.client.count();
+        res.status(200).json(JSON.stringify(add));
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 app.post('/assist', async (req, res) => {
     const con = req.body;
     try {
