@@ -1,15 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import { library } from '@fortawesome/fontawesome-svg-core';
+=======
+// import * as FaIcons from 'react-icons/fa';
+>>>>>>> main
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 import { Button } from './Button';
+<<<<<<< HEAD
 import { FaHeartPulse } from "react-icons/fa6";
 import "./Navbar.css"
 
+=======
+import "./Navbar.css"
+// const Nav = styled.div`
+//   background: #800000;
+//   height: 80px;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   font-family: "Gill Sans", sans-serif;
+// `;
+>>>>>>> main
 
 const NavIcon = styled(Link)`
   margin-left: 2rem;
@@ -19,11 +35,18 @@ const NavIcon = styled(Link)`
   justify-content: flex-start;
   align-items: center;
   font-family: "Gill Sans", sans-serif;
+<<<<<<< HEAD
 
 `;
 
 const SidebarNav = styled.nav`
   background: rgb(4, 38, 76);
+=======
+`;
+
+const SidebarNav = styled.nav`
+  background: #800000;
+>>>>>>> main
   font-size: 2rem;
   width: 250px;
   height: 100vh;
@@ -36,8 +59,11 @@ const SidebarNav = styled.nav`
   z-index: 10;
   padding-top: 100px;
   font-family: "Gill Sans", sans-serif;
+<<<<<<< HEAD
   border:#fff;
 
+=======
+>>>>>>> main
 `;
 
 const SidebarWrap = styled.div`
@@ -81,8 +107,12 @@ const Sidebar = () => {
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+<<<<<<< HEAD
             <h5>One <FaHeartPulse />Heart</h5>                  
             <h1>McKINNEY</h1>
+=======
+              <img src="/images/ohm-logo.jpg" to="/" alt="" height="80px"></img>
+>>>>>>> main
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -108,6 +138,7 @@ const Sidebar = () => {
                 </Link>
               </li>
 
+<<<<<<< HEAD
 
 
               {button && <Button onClick={() => {
@@ -120,6 +151,21 @@ const Sidebar = () => {
             </ul>
 
             
+=======
+              <li className='nav-item'>
+                <div className="user-icon">
+                  <h3>{ad.FirstName} {ad.LastName}</h3>
+                  <i className="fas fa-user"></i>
+                </div>
+              </li>
+
+
+            </ul>
+
+            {button && <Button onClick={() => {
+              sessionStorage.removeItem("token");
+            }} buttonStyle='btn--outline' to="login">Log out</Button>}
+>>>>>>> main
           </div>
         </nav>
 

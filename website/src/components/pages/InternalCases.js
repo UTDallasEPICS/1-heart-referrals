@@ -1,15 +1,25 @@
 import React from 'react';
+<<<<<<< HEAD
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 export const InternalCases = () => {
   return (
     <></>
+=======
+
+export const InternalCases = () => {
+  return (
+    <div className='internalCases'>
+      <h1>INTERNAL CASESS</h1>
+    </div>
+>>>>>>> main
   );
 };
 
 export const OpenCase = () => {
   return (
+<<<<<<< HEAD
     <div className='content-page' >
 
     <Dropdown data-bs-theme="dark">
@@ -60,11 +70,17 @@ export const OpenCase = () => {
       </Dropdown.Menu>
     </Dropdown>
   </div>
+=======
+    <div className='openCase'>
+      <h1>INTERNAL CASES/open</h1>
+    </div>
+>>>>>>> main
   );
 };
 
 export const ClosedCase = () => {
   return (
+<<<<<<< HEAD
     <div className='content-page' >
 
     <Dropdown data-bs-theme="dark">
@@ -115,10 +131,16 @@ export const ClosedCase = () => {
       </Dropdown.Menu>
     </Dropdown>
   </div>
+=======
+    <div className='closedCase'>
+      <h1>INTERNAL CASES/Closed</h1>
+    </div>
+>>>>>>> main
   );
 };
 export const AllCase = () => {
     return (
+<<<<<<< HEAD
       <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -169,6 +191,11 @@ export const AllCase = () => {
         </Dropdown.Menu>
       </Dropdown>
     </div>
+=======
+      <div className='allCase'>
+        <h1>INTERNAL CASES/all</h1>
+      </div>
+>>>>>>> main
     );
   };
 

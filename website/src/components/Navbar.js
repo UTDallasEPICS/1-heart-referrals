@@ -33,8 +33,13 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+<<<<<<< HEAD
             <h5>One <FaHeartPulse />Heart</h5>                  
             <h1>McKINNEY</h1>            </Link>
+=======
+              <img src="/images/ohm-logo.jpg" to="/" alt="" height="80px"></img>
+            </Link>
+>>>>>>> main
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
@@ -69,7 +74,11 @@ function Navbar() {
                   className='nav-links-mobile'
                   onClick={closeMobileMenu}
                 >
+<<<<<<< HEAD
                   SIGN IN
+=======
+                  Sign In
+>>>>>>> main
                 </Link>
               </li>
             </ul>

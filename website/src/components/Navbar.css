@@ -1,5 +1,9 @@
 .navbar {
+<<<<<<< HEAD
   background: rgb(4, 38, 76);
+=======
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(189, 18, 18) 100%);
+>>>>>>> main
   height: 90px;
   width: 100%;
   display: flex;
@@ -10,6 +14,38 @@
   top: 0;
   z-index: 999;
   border: solid #434141;
+}
+
+.user-icon {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0rem 1rem;
+  height: 90px;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+}
+
+.user-icon > i {
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: font-size .2s;
+}
+
+.user-icon > h3 {
+  font-size: 1rem;
+  transition: font-size .2s;
+}
+
+.user-icon:hover > i {
+  font-size: 2rem;
+}
+
+.user-icon:hover > h3 {
+  font-size: 1.2rem;
 }
 
 .user-icon {
@@ -89,7 +125,11 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+<<<<<<< HEAD
   padding: 0rem 0.5rem;
+=======
+  padding: 0rem 1rem;
+>>>>>>> main
   height: 100%;
 }
 

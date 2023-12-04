@@ -31,7 +31,11 @@ const DropdownLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+<<<<<<< HEAD
   color: white;
+=======
+  color: #f5f5f5;
+>>>>>>> main
   font-size: 13px;
 
   &:hover {
@@ -56,8 +60,8 @@ const SubMenu = ({ item }) => {
           {item.subNav && subnav
             ? item.iconOpened
             : item.subNav
-            ? item.iconClosed
-            : null}
+              ? item.iconClosed
+              : null}
         </div>
       </SidebarLink>
       {subnav &&
