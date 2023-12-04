@@ -7,10 +7,7 @@ import * as RiIcons from 'react-icons/ri';
 export const SidebarData = [
   {
     title: 'INBOUND REFERRALS',
-<<<<<<< HEAD
     path: '/inboundReferrals',
-=======
->>>>>>> main
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -31,10 +28,7 @@ export const SidebarData = [
 
   {
     title: 'ASSISTANCE REQUESTS',
-<<<<<<< HEAD
     path: '/assistanceRequestss',
-=======
->>>>>>> main
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -47,11 +41,7 @@ export const SidebarData = [
         cName: 'sub-nav'
 
       },
-<<<<<<< HEAD
     
-=======
-
->>>>>>> main
       {
         title: 'Closed',
         path: './assistanceRequests/closed',
@@ -68,16 +58,10 @@ export const SidebarData = [
       }
     ]
   },
-<<<<<<< HEAD
   
   {
     title: 'INTERNAL CASES',
     path: '/internalCases',
-=======
-
-  {
-    title: 'INTERNAL CASES',
->>>>>>> main
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -99,16 +83,10 @@ export const SidebarData = [
       },
     ]
   },
-<<<<<<< HEAD
   
   {
     title: 'OUTBOUND REFERRALS',
     path: '/outbound',
-=======
-
-  {
-    title: 'OUTBOUND REFERRALS',
->>>>>>> main
     icon: <FaIcons.FaEnvelopeOpenText />,
 
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -156,10 +134,7 @@ export const SidebarData = [
 
   {
     title: 'EXTERNAL CASES',
-<<<<<<< HEAD
     path: './externalCases',
-=======
->>>>>>> main
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -184,10 +159,7 @@ export const SidebarData = [
 
   {
     title: 'OUT OF NETWORK CASES',
-<<<<<<< HEAD
     path: '/outOfNetworkCases',
-=======
->>>>>>> main
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -209,11 +181,7 @@ export const SidebarData = [
       },
     ]
   },
-<<<<<<< HEAD
   
-=======
-
->>>>>>> main
 
 ];
 

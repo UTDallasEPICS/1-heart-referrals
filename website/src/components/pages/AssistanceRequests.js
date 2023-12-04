@@ -1,29 +1,17 @@
 import React from 'react';
 import './Pages.css';
-<<<<<<< HEAD
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 export const AssistanceRequests = () => {
   return (
     <div className='filter-bar'>
 
-=======
-
-export const AssistanceRequests = () => {
-  return (
-    <div className='filter-bar'>
-      <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
-      <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
-
-      <body> hjfckushdhfcsihfcisehfjcsjdhckufbdvjkdf </body>
->>>>>>> main
     </div>
   );
 };
 
 export const AssistanceAction = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -51,17 +39,11 @@ export const AssistanceAction = () => {
       </Dropdown>
     </div>
 
-=======
-    <div className="content-page">
-      <h1>Hello</h1>
-    </div>
->>>>>>> main
   );
 };
 
 export const Closed = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -99,17 +81,12 @@ export const Closed = () => {
           <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-=======
-    <div className='closed'>
-      <h1>ASSISTANCE REQUESTS/Closed</h1>
->>>>>>> main
     </div>
   );
 };
 
 export const Processed = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -135,10 +112,6 @@ export const Processed = () => {
           <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-=======
-    <div className='processed'>
-      <h1>ASSISTANCE REQUESTS/Processed</h1>
->>>>>>> main
     </div>
   );
 };

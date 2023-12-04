@@ -1,24 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 export const OutOfNetworkCasesCases = () => {
   return (
     <div className='internalCases'>
-=======
-
-export const OutOfNetworkCasesCases = () => {
-  return (
-    <div className='internalCases'>
-      <h1>EXTERNAL CASESS</h1>
->>>>>>> main
     </div>
   );
 };
 
 export const OutOpenCase = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
     <Dropdown data-bs-theme="dark">
@@ -57,17 +48,11 @@ export const OutOpenCase = () => {
       </Dropdown.Menu>
     </Dropdown>
   </div>
-=======
-    <div className='openCase'>
-      <h1>OUT OF NETWORK CASES/outOpen</h1>
-    </div>
->>>>>>> main
   );
 };
 
 export const OutClosedCase = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
     <Dropdown data-bs-theme="dark">
@@ -118,16 +103,10 @@ export const OutClosedCase = () => {
       </Dropdown.Menu>
     </Dropdown>
   </div>
-=======
-    <div className='closedCase'>
-      <h1>OUT OF NETWORK CASES/outClosed</h1>
-    </div>
->>>>>>> main
   );
 };
 export const OutAllCase = () => {
     return (
-<<<<<<< HEAD
       <div className='content-page' >
 
     <Dropdown data-bs-theme="dark">
@@ -178,11 +157,6 @@ export const OutAllCase = () => {
       </Dropdown.Menu>
     </Dropdown>
   </div>
-=======
-      <div className='allCase'>
-        <h1>OUT OF NETWORK CASES/outAll</h1>
-      </div>
->>>>>>> main
     );
   };
 

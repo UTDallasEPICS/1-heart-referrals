@@ -59,8 +59,4 @@ model Partner {
   ReferralCount   BigInt
   PartnerPrograms String
   Client          Client[]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main

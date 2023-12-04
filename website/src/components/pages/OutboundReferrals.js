@@ -1,24 +1,16 @@
 import React from 'react';
-<<<<<<< HEAD
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-=======
->>>>>>> main
 
 export const OutboundReferrals = () => {
   return (
     <div className=''>
-<<<<<<< HEAD
-=======
-      <h1>OUTBOUND REFERRALS</h1>
->>>>>>> main
     </div>
   );
 };
 
 export const OutDrafts = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -56,15 +48,10 @@ export const OutDrafts = () => {
           <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-=======
-    <div className=''>
-      <h1>OUTBOUND REFERRALS/OutDrafts</h1>
->>>>>>> main
     </div>
   );
 };
 export const OutRejected = () => {
-<<<<<<< HEAD
   return (
     <div className='content-page' >
 
@@ -353,50 +340,6 @@ export const OutAll = () => {
   </div>
   );
 };
-=======
-    return (
-      <div className=''>
-        <h1>OUTBOUND REFERRALS/Rejected</h1>
-      </div>
-    );
-  };
-
-  export const OutRecalled = () => {
-    return (
-      <div className='out'>
-        <h1>OUTBOUND REFERRALS/OutRecalled</h1>
-      </div>
-    );
-  };
-  export const OutActions = () => {
-    return (
-      <div className='out'>
-        <h1>OUTBOUND REFERRALS/OutActions</h1>
-      </div>
-    );
-  };
-  export const OutReview = () => {
-    return (
-      <div className='out'>
-        <h1>OUTBOUND REFERRALS/OutReview</h1>
-      </div>
-    );
-  };
-  export const OutClosed = () => {
-    return (
-      <div className='out'>
-        <h1>OUTBOUND REFERRALS/OutClosed</h1>
-      </div>
-    );
-  };
-  export const OutAll = () => {
-    return (
-      <div className='out'>
-        <h1>OUTBOUND REFERRALS/OutAll</h1>
-      </div>
-    );
-  };
->>>>>>> main
 
 
 

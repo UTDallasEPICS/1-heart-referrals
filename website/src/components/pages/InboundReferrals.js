@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-=======
->>>>>>> main
 
 export const InboundReferrals = () => {
   return (
@@ -15,7 +12,6 @@ export const InboundReferrals = () => {
 
 export const InboundAction = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -65,17 +61,12 @@ export const InboundAction = () => {
           <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-=======
-    <div className='inboundAction'>
-      <h1>INBOUND REFERRALS/Needs Action</h1>
->>>>>>> main
     </div>
   );
 };
 
 export const InReview = () => {
   return (
-<<<<<<< HEAD
     <div className='content-page' >
 
       <Dropdown data-bs-theme="dark">
@@ -112,10 +103,6 @@ export const InReview = () => {
           <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-=======
-    <div className='closed'>
-      <h1>INBOUND REFERRALS/Closed</h1>
->>>>>>> main
     </div>
   );
 };
