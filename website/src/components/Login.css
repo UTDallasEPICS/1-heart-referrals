@@ -5,7 +5,7 @@
     background-color: #ebebeb;
     margin: 0 0 0 0;
     height: 100%;
-    width: 120%;
+    width: 100%;
     
 }
 .login-float {
@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
+    color: rgb(4, 38, 76);
     width: var(--width);
     margin-left: calc(50vw - (var(--width) / 2));
     margin-top: calc(50vh - (var(--height) / 2));
@@ -79,7 +80,7 @@
 .login > form > input[type=submit] {
     background-color:  rgb(4, 38, 76);
     border-radius: 0.2em;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 150%;
     transition: outline .1s,
     color .2s,
