@@ -7,6 +7,7 @@ import * as RiIcons from 'react-icons/ri';
 export const SidebarData = [
   {
     title: 'INBOUND REFERRALS',
+    path: '/inboundReferrals',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -27,6 +28,7 @@ export const SidebarData = [
 
   {
     title: 'ASSISTANCE REQUESTS',
+    path: '/assistanceRequestss',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -39,7 +41,7 @@ export const SidebarData = [
         cName: 'sub-nav'
 
       },
-
+    
       {
         title: 'Closed',
         path: './assistanceRequests/closed',
@@ -56,9 +58,10 @@ export const SidebarData = [
       }
     ]
   },
-
+  
   {
     title: 'INTERNAL CASES',
+    path: '/internalCases',
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -80,9 +83,10 @@ export const SidebarData = [
       },
     ]
   },
-
+  
   {
     title: 'OUTBOUND REFERRALS',
+    path: '/outbound',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -130,6 +134,7 @@ export const SidebarData = [
 
   {
     title: 'EXTERNAL CASES',
+    path: './externalCases',
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -154,6 +159,7 @@ export const SidebarData = [
 
   {
     title: 'OUT OF NETWORK CASES',
+    path: '/outOfNetworkCases',
     icon: <FaIcons.FaCartPlus />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -175,7 +181,7 @@ export const SidebarData = [
       },
     ]
   },
-
+  
 
 ];
 
