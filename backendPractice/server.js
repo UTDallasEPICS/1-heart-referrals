@@ -45,13 +45,35 @@ app.post('/assist', async (req, res) => {
             skip: con.page * 50,
             take: 50,
             select: {
+                ClientId: true,
                 FirstName: true,
                 LastName: true,
                 ServicesSeeking: true,
                 CreatedAt: true,
             },
         });
-        res.status(200).json(JSON.stringify(find));
+        res.status(200).json(JSON.stringify(
+            find,
+            (key, value) => (typeof value === 'bigint' ? value.toString() : value) // return everything else unchanged
+        ));
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+app.post('/client', async (req, res) => {
+    const id = req.body.client;
+    try {
+        const find = await prisma.client.findFirst({
+            where: {
+                ClientId: id,
+            },
+        });
+        console.log(find);
+        res.status(200).json(JSON.stringify(
+            find,
+            (key, value) => (typeof value === 'bigint' ? value.toString() : value)
+        ));
     } catch (error) {
         console.log(error);
     }
@@ -60,7 +82,6 @@ app.post('/assist', async (req, res) => {
 app.post('/login', async (req, res) => {
     const acc = req.body.cred;
     try {
-        //const check = await pool.query("SELECT * FROM  WHERE email = $1", [acc.user]);
         const check = await prisma.admin.findFirst({
             where: {
                 Email: acc.user
@@ -73,7 +94,7 @@ app.post('/login', async (req, res) => {
 
             res.status(201).json(JSON.stringify(
                 check,
-                (key, value) => (typeof value === 'bigint' ? value.toString() : value) // return everything else unchanged
+                (key, value) => (typeof value === 'bigint' ? value.toString() : value)
             ));
         }
         else
@@ -90,7 +111,6 @@ app.post('/sign-up', async (req, res) => {
     const acc = req.body.cred;
     const hpwd = await bcrypt.hash(acc.pwd, 10);
     try {
-        //const check = await pool.query("SELECT email FROM test WHERE email = $1", [acc.user]);
         const check = await prisma.admin.findFirst({
             where: {
                 Email: acc.user
@@ -99,7 +119,6 @@ app.post('/sign-up', async (req, res) => {
         console.log(check);
         if (check)
             throw new Error('EXISTS');
-        //const add = await pool.query("INSERT INTO test (email, pwd) VALUES($1, $2)", [acc.user, hpwd]);
         const add = await prisma.admin.create({
             data: {
                 FirstName: acc.fname,

@@ -51,7 +51,6 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
-  console.log(window.innerHeight);
   const showSidebar = () => setSidebar(!sidebar);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);

@@ -126,7 +126,7 @@ function Login({ type }) {
             const token = response.data;
 
             sessionStorage.setItem('token', token);
-            nav("/Sidebar");
+            nav("/assistanceRequests/assistanceAction");
           })
           .catch(() => {
             setLoginFail(true);
