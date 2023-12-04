@@ -5,7 +5,7 @@
     background-color: #ebebeb;
     margin: 0 0 0 0;
     height: 100%;
-    width: 100%;
+    width: 120%;
     
 }
 .login-float {
@@ -19,7 +19,7 @@
     margin-left: calc(50vw - (var(--width) / 2));
     margin-top: calc(50vh - (var(--height) / 2));
     border: 1px solid black;
-    border-radius: 1em 1em;
+    border-radius: 0.4em;
     text-align: center;
     padding-top: calc(.1 * var(--height));
     padding-bottom: calc(.05 * var(--height));
@@ -60,7 +60,7 @@
 .login > form > input{
     width: calc(.8 * var(--width));
     height: calc(.1 * var(--height));
-    border-radius: 1em 1em;
+    border-radius: 0.2em;
     font-size: 100%;
     outline: none;
     border: none;
@@ -77,8 +77,8 @@
 }
 
 .login > form > input[type=submit] {
-    background-color: #b41212;
-    border-radius: .67em .67em;
+    background-color:  rgb(4, 38, 76);
+    border-radius: 0.2em;
     color: white;
     font-size: 150%;
     transition: outline .1s,
@@ -87,19 +87,19 @@
 }
 
 .login > form > input[type=text]:focus, input[type=password]:focus {
-    outline: 2px solid #b41212;
+    outline: 2px solid rgb(4, 38, 76);
 }
 
 .login > form > input[type=submit]:hover {
     background-color: white;
-    outline: 2px solid #b41212;
-    color: #b41212;
+    outline: 2px solid  rgb(4, 38, 76);
+    color:  rgb(4, 38, 76);
 }
 
 .login > a {
     display: inline-block;
     height: auto;
-    color: #b41212;
+    color:  rgb(4, 38, 76);
     text-decoration: none;
     margin-bottom: 10;
 }
@@ -114,7 +114,7 @@
 }
 .login-btns .btn {
     background-color: transparent;
-    color: #b41212;
+    color:  rgb(4, 38, 76);
     width: fit-content;
 }
 
@@ -127,7 +127,7 @@
 
 .show-btns .btn {
     background-color: transparent;
-    color: #b41212;
+    color:  rgb(4, 38, 76);
 }
 
 .login-btns .btn:hover {
