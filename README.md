@@ -36,7 +36,7 @@ NA
 ##### Other tools - Postman 
 
 # Instructions to set up development envrionment
-##### How to start project
+#### How to start project
 ##### Download pg admin 
 ##### Download PostgreSQL
 ##### Download Node.js
