@@ -13,27 +13,35 @@ Provide database design and the ability to capture partner and client data. This
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-
 # Conceptual Overview
-what is the project intended to accomplish?
-Include a broad description of the different types of users/roles and what they do.
+The One Heart McKinney(OHM) referral system project serves as a  link between individuals in need and social service providers.  It encompasses partner,client and adminstrator information storage, an intake process for families to outline their needs, and a structured system for assigning suitable partners. 
+This project gives One Heart McKinney a way to store client referrals and direct them to different partners.
 
 # Functional requirements 
-(broken down by page) - what are the discrete operations the app needs to be capable of?
+Sign Up Page - Adminstrators from One Heart McKinney can make accounts on this page.
+Login Page - Adminstrators can login to their account on this pgae.
+Dashboard - 
+Displaying Cases Page - Displays client name, service type requested 
+About Us Page 
+Landing Page - Users can 
 
-# Third party integrations 
-and what they do in this project - HubSpot, Stripe, Auth0, etc.
+# Third party integrations  
+NA
  
 # Tech Stack
-Front end - Node.js
-Backend - Express
+Front end - React, Axios
+Backend - Node.js, Express, Bcrypt, Axios
 Database - PostgreSQL
 Important packages - Prisma
 Other tools - Postman 
 
 # Instructions to set up development envrionment
 How to start project?
+Download pg admin 
+Download PostgreSQL
+Download Node.js
+npm install express
+npm install bcryptjs
+npm install axios
+npm install prisma
 
-How do you initialize the database?
-
-How do you set up authentication
