@@ -18,30 +18,30 @@ The One Heart McKinney(OHM) referral system project serves as a  link between in
 This project gives One Heart McKinney a way to store client referrals and direct them to different partners.
 
 # Functional requirements 
-###Sign Up Page - Adminstrators from One Heart McKinney can make accounts on this page.
-###Login Page - Adminstrators can login to their account on this pgae.
-###Dashboard - 
-###Displaying Cases Page - Displays client name, service type requested 
-###About Us Page 
-###Landing Page - Users can 
+### Sign Up Page - Adminstrators from One Heart McKinney can make accounts on this page.
+### Login Page - Adminstrators can login to their account on this pgae.
+### Dashboard - 
+### Displaying Cases Page - Displays client name, service type requested 
+### About Us Page 
+### Landing Page - Users can 
 
 # Third party integrations  
 NA
  
 # Tech Stack
-###Front end - React, Axios
-###Backend - Node.js, Express, Bcrypt, Axios
-###Database - PostgreSQL
-###Important packages - Prisma
-###Other tools - Postman 
+### Front end - React, Axios
+### Backend - Node.js, Express, Bcrypt, Axios
+### Database - PostgreSQL
+### Important packages - Prisma
+### Other tools - Postman 
 
 # Instructions to set up development envrionment
-###How to start project
-###Download pg admin 
-###Download PostgreSQL
-###Download Node.js
-###npm install express
-###npm install bcryptjs
-###npm install axios
-###pm install prisma
+### How to start project
+### Download pg admin 
+### Download PostgreSQL
+### Download Node.js
+### npm install express
+### npm install bcryptjs
+### npm install axios
+### npm install prisma
 
