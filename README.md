@@ -20,9 +20,8 @@ This project gives One Heart McKinney a way to store client referrals and direct
 # Functional requirements 
 ##### Sign Up Page - Adminstrators from One Heart McKinney can make accounts on this page.
 ##### Login Page - Adminstrators can login to their account on this pgae.
-##### Dashboard - 
+##### Dashboard - You can see a side bar with internal cases and assitance requests.
 ##### Displaying Cases Page - Displays client name, service type requested 
-##### About Us Page 
 ##### Landing Page - Users can 
 
 # Third party integrations  
