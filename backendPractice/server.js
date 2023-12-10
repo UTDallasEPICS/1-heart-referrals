@@ -3,7 +3,6 @@ const app = express()
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const PORT = 3001;
-const pool = require('./db')
 const axios = require("axios").create({ baseUrl: "http://localhost:3001/" });
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();

@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:Password%23123@localhost:5433/Ohmega"
+  url      = env("DATABASE_URL")
 }
 
 model Admin {
@@ -65,7 +65,7 @@ model Partner {
 
 model Cases {
   caseid    Int       @id @default(autoincrement())
-  clientid  Int?
+  clientid  BigInt?
   TimeStamp DateTime? @db.Timestamp(6)
   Client    Client?   @relation(fields: [clientid], references: [ClientId], onDelete: NoAction, onUpdate: NoAction)
 }
