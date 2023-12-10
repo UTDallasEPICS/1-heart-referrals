@@ -1,12 +1,11 @@
-*{
-  margin:0px 0px 0px 0px;
+* {
+  margin: 0px 0px 0px 0px;
   font-family: Arial, Helvetica, sans-serif;
-  color:rgb(250, 245, 245);
+  color: rgb(250, 245, 245);
 }
 
 .App {
   text-align: center;
-
 }
 
 .App-logo {
@@ -43,14 +42,11 @@
     transform: rotate(360deg);
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
-
-
-

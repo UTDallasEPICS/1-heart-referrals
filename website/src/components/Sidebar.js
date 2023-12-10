@@ -10,7 +10,6 @@ import { Button } from './Button';
 import { FaHeartPulse } from "react-icons/fa6";
 import "./Navbar.css"
 
-
 const NavIcon = styled(Link)`
   margin-left: 2rem;
   font-size: 2rem;
@@ -29,24 +28,23 @@ const SidebarNav = styled.nav`
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
   top: 0;
+  margin-right: -10px;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-  transition: 350ms;
   z-index: 10;
-  padding-top: 100px;
+  padding-top: 0px;
+  z-index: 999;
   font-family: "Gill Sans", sans-serif;
   border:#fff;
 
 `;
-
 const SidebarWrap = styled.div`
   width: 100%;
+  position: relative
 `;
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -56,9 +54,7 @@ const Sidebar = () => {
   let location = useLocation();
   const nav = useNavigate();
   const ad = JSON.parse(sessionStorage.getItem("token"));
-  useEffect(() => {
 
-  }, [location]);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -81,8 +77,8 @@ const Sidebar = () => {
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <h5>One <FaHeartPulse />Heart</h5>                  
-            <h1>McKINNEY</h1>
+              <h5>One <FaHeartPulse />Heart</h5>
+              <h1>McKINNEY</h1>
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -111,26 +107,26 @@ const Sidebar = () => {
 
 
               {button && <Button onClick={() => {
-              sessionStorage.removeItem("token");
-            }} buttonStyle='btn--outline' to="login"> <div className="user-icon">
-            <i className="fas fa-user"></i>
-          </div>
-            </Button>}
+                sessionStorage.removeItem("token");
+              }} buttonStyle='btn--outline' to="login"> <div className="user-icon">
+                  {ad.FirstName} {ad.LastName}<i style={{ color: "#fff" }} className="fas fa-user"></i>
+                </div>
+              </Button>}
 
             </ul>
 
-            
+
           </div>
         </nav>
 
-        <SidebarNav sidebar={true}>
+        <SidebarNav sidebar={true} className='sidebar'>
           <SidebarWrap>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
           </SidebarWrap>
         </SidebarNav>
-      </IconContext.Provider>
+      </IconContext.Provider >
     </>
   );
 };

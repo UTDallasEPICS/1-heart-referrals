@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:Password%23123@localhost:5433/Ohmega"
+  url      = env("DATABASE_URL")
 }
 
 model Admin {
@@ -37,8 +37,8 @@ model Client {
   BelowEighteen          Int?     @db.SmallInt
   WorkingAge             Int?     @db.SmallInt
   Seniors                Int?     @db.SmallInt
-  Homeless               Boolean?
-  EmployedOrNot          Boolean?
+  Homeless               Boolean? @db.Boolean
+  EmployedOrNot          Boolean? @db.Boolean
   ServicesSeeking        String
   AdditionalInfo         String?
   ServicesDropDown       String
@@ -47,6 +47,7 @@ model Client {
   referred_by_partner_id BigInt?
   Cases                  Cases[]
   Partner                Partner? @relation(fields: [referred_by_partner_id], references: [PartnerId], onDelete: NoAction, onUpdate: NoAction)
+  CreatedAt              DateTime
 }
 
 model Partner {
@@ -64,7 +65,7 @@ model Partner {
 
 model Cases {
   caseid    Int       @id @default(autoincrement())
-  clientid  Int?
+  clientid  BigInt?
   TimeStamp DateTime? @db.Timestamp(6)
   Client    Client?   @relation(fields: [clientid], references: [ClientId], onDelete: NoAction, onUpdate: NoAction)
 }

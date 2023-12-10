@@ -37,8 +37,8 @@ model Client {
   BelowEighteen          Int?     @db.SmallInt
   WorkingAge             Int?     @db.SmallInt
   Seniors                Int?     @db.SmallInt
-  Homeless               Boolean?
-  EmployedOrNot          Boolean?
+  Homeless               Boolean? @db.Boolean
+  EmployedOrNot          Boolean? @db.Boolean
   ServicesSeeking        String
   AdditionalInfo         String?
   Services               String
@@ -46,6 +46,7 @@ model Client {
   SignBox                Boolean
   referred_by_partner_id BigInt?
   Partner                Partner? @relation(fields: [referred_by_partner_id], references: [PartnerId], onDelete: NoAction, onUpdate: NoAction)
+  CreatedAt              DateTime
 }
 
 model Partner {

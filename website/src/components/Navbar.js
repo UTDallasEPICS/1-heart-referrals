@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import Sidebar from './Sidebar';
@@ -33,8 +32,8 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <h5>One <FaHeartPulse />Heart</h5>                  
-            <h1>McKINNEY</h1>            </Link>
+              <h5>One <FaHeartPulse />Heart</h5>
+              <h1>McKINNEY</h1>            </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
@@ -73,8 +72,7 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-
-            {button && <Button buttonStyle='btn--outline' to="login">SIGN UP</Button>}
+            {button && <Link to="/login"><button className='sign-btn'>SIGN UP</button></Link>}
           </div>
         </nav>
       </>

@@ -2,12 +2,12 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import Sidebar from './components/Sidebar';
-import { AssistanceRequests, AssistanceAction, Closed, Processed } from './components/pages/AssistanceRequests';
-import { InboundReferrals, InboundAction, InReview } from './components/pages/InboundReferrals';
-import { InternalCases, OpenCase, ClosedCase, AllCase } from './components/pages/InternalCases';
-import { OutboundReferrals, OutDrafts, OutRejected, OutRecalled, OutActions, OutReview, OutClosed, OutAll } from './components/pages/OutboundReferrals';
-import { ExternalCases, ExOpenCase, ExClosedCase, ExAllCase } from './components/pages/ExternalCases';
-import { OutOfNetworkCasesCases, OutOpenCase, OutClosedCase, OutAllCase } from './components/pages/OutOfNetwrokCases';
+import { AssistanceAction, Closed, Processed, AssistanceClient } from './components/pages/AssistanceRequests';
+import { InboundAction, InReview } from './components/pages/InboundReferrals';
+import { OpenCase, ClosedCase, AllCase } from './components/pages/InternalCases';
+import { OutDrafts, OutRejected, OutRecalled, OutActions, OutReview, OutClosed, OutAll } from './components/pages/OutboundReferrals';
+import { ExOpenCase, ExClosedCase, ExAllCase } from './components/pages/ExternalCases';
+import { OutOpenCase, OutClosedCase, OutAllCase } from './components/pages/OutOfNetwrokCases';
 import LoginPage from './components/pages/LoginPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
@@ -37,6 +37,7 @@ function App() {
         <Route path='/assistanceRequests/assistanceAction' exact Component={AssistanceAction} />
         <Route path='/assistanceRequests/closed' exact Component={Closed} />
         <Route path='/assistanceRequests/processed' exact Component={Processed} />
+        <Route path='/assistanceRequests/assistanceAction/client' exact Component={AssistanceClient} />
 
         <Route path='/internalCases' exact />
         <Route path='/internalCases/Open' exact Component={OpenCase} />
