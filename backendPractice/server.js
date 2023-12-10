@@ -20,7 +20,6 @@ app.use(function (req, res, next) {
 
 app.get('/', async (req, res) => {
     try {
-        const test = await prisma.admin.findMany();
     } catch (error) {
 
     }
@@ -111,6 +110,7 @@ app.post('/sign-up', async (req, res) => {
     const acc = req.body.cred;
     const hpwd = await bcrypt.hash(acc.pwd, 10);
     try {
+
         const check = await prisma.admin.findFirst({
             where: {
                 Email: acc.user

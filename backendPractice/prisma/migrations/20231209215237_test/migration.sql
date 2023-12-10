@@ -40,6 +40,7 @@ CREATE TABLE "Client" (
     "ServicesDescribe" TEXT NOT NULL,
     "SignBox" BOOLEAN NOT NULL,
     "referred_by_partner_id" BIGINT,
+    "CreatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "Client_pkey" PRIMARY KEY ("ClientId")
 );
