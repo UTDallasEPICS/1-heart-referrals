@@ -13,6 +13,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
 import ForgotPage from './components/pages/ForgotPage';
 
+import AboutUs from './components/AboutUs';
+import Contact from './components/Contact';
+import OurTeam from './components/OurTeam';
+import NetworkPartners from './components/NetworkPartners';
+import FAQ from './components/FAQ';
+import History from './components/History';
+
+
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
@@ -26,6 +36,14 @@ function App() {
         <Route path='/' exact Component={Home} />
         <Route path='/login/forgot' exact Component={ForgotPage} />
         <Route path='/sign-up' exact Component={SignUpPage} />
+
+
+        <Route path='/about-us-container' exact Component={AboutUs} />
+        <Route path='/contact' exact Component={Contact} />
+        <Route path='/our-team' exact Component={OurTeam} />
+        <Route path='/network-partners' exact Component={NetworkPartners} />
+        <Route path='/about-us-container/history' element={<History />} />
+        <Route path='/about-us-container/faq' element={<FAQ />} />
 
 
         <Route path='/inboundReferrals' exact />
