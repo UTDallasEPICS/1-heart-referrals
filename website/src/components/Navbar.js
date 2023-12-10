@@ -36,17 +36,18 @@ function Navbar() {
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
               <h5>One<FaHeartPulse />Heart</h5>
-              <h1>McKINNEY</h1> </Link>
+              <h1>McKINNEYY</h1> </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
+            
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
-              <li className='nav-item'>
+              {/* <li className='nav-item'>
                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                   Home
                 </Link>
-              </li>
+              </li> */}
 
 
               <li className='nav-item'>
@@ -56,7 +57,7 @@ function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   About OHM
-                  <NavLink>
+                  {/* <NavLink>
                     <ul className='dropdown-menu'>
                       <li>
                         <NavLink
@@ -77,7 +78,7 @@ function Navbar() {
                         </NavLink>
                       </li>
                     </ul>
-                  </NavLink>
+                  </NavLink> */}
                 </Link>
               </li>
               <li className='nav-item'>
@@ -89,6 +90,7 @@ function Navbar() {
                   Our Team
                 </Link>
               </li>
+
               <li className='nav-item'>
                 <Link
                   to='/network-partners'
@@ -98,6 +100,9 @@ function Navbar() {
                   Network Partners
                 </Link>
               </li>
+
+
+
               <li className='nav-item'>
                 <Link
                   to='/contact'
@@ -108,7 +113,7 @@ function Navbar() {
                 </Link>
               </li>
 
-              <li className='nav-item'>
+              {/* <li className='nav-item'>
                 <Link
                   to='/Sidebar'
                   className='nav-links'
@@ -116,11 +121,11 @@ function Navbar() {
                 >
                   Landing Page
                 </Link>
-              </li>
+              </li> */}
 
 
 
-              <li>
+              <li className ='nav-item'>
                 <Link
                   to='/login'
                   className='nav-links-mobile'
