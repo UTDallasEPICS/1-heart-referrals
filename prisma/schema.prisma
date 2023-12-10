@@ -37,8 +37,8 @@ model Client {
   BelowEighteen          Int?     @db.SmallInt
   WorkingAge             Int?     @db.SmallInt
   Seniors                Int?     @db.SmallInt
-  Homeless               Boolean? @db.Boolean
-  EmployedOrNot          Boolean? @db.Boolean
+  Homeless               Boolean?
+  EmployedOrNot          Boolean?
   ServicesSeeking        String
   AdditionalInfo         String?
   ServicesDropDown       String
@@ -47,7 +47,6 @@ model Client {
   referred_by_partner_id BigInt?
   Cases                  Cases[]
   Partner                Partner? @relation(fields: [referred_by_partner_id], references: [PartnerId], onDelete: NoAction, onUpdate: NoAction)
-  CreatedAt              DateTime
 }
 
 model Partner {
