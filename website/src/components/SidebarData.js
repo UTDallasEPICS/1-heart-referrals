@@ -27,6 +27,7 @@ export const SidebarData = [
 
   {
     title: 'ASSISTANCE REQUESTS',
+    path: '/assistanceRequestss',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -60,6 +61,7 @@ export const SidebarData = [
 
   {
     title: 'INTERNAL CASES',
+    path: '/internalCases',
     icon: <FaIcons.FaCartPlus />,
     path: '#',
     iconClosed: <RiIcons.RiArrowDownSFill />,

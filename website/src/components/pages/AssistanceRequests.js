@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Pages.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 const app = axios.create({
   baseURL: 'http://localhost:3001'
 });
@@ -11,10 +13,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", 
 export const AssistanceRequests = () => {
   return (
     <div className='filter-bar'>
-      <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
-      <h1>ASSISTANCE REQUESTS dcgdssdjhgjcgsdjcgsdugcusdcjdcjudhcudhcduchud</h1>
 
-      <body> hjfckushdhfcsihfcisehfjcsjdhckufbdvjkdf </body>
     </div>
   );
 };
@@ -85,21 +84,80 @@ export const AssistanceAction = () => {
           })}
         </table>}
     </div>
+
   );
 };
 
 export const Closed = () => {
   return (
-    <div className='closed'>
-      <h1>ASSISTANCE REQUESTS/Closed</h1>
+    <div className='content-page' >
+
+      <Dropdown data-bs-theme="dark">
+        <Dropdown.Toggle className='down-button' id="dropdown-button-dark-example1" variant="secondary">
+          Care Coordinator
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" active>Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      <Dropdown data-bs-theme="dark">
+        <Dropdown.Toggle className='down-button' id="dropdown-button-dark-example1" variant="secondary">
+          Resolution (All)
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" active>Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      <Dropdown data-bs-theme="dark">
+        <Dropdown.Toggle className='down-button' id="dropdown-button-dark-example1" variant="secondary">
+          Service Type
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" active>Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </div>
   );
 };
 
 export const Processed = () => {
   return (
-    <div className='processed'>
-      <h1>ASSISTANCE REQUESTS/Processed</h1>
+    <div className='content-page' >
+
+      <Dropdown data-bs-theme="dark">
+        <Dropdown.Toggle className='down-button' id="dropdown-button-dark-example1" variant="secondary">
+          Care Coordinator
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" active>Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      <Dropdown data-bs-theme="dark">
+        <Dropdown.Toggle className='down-button' id="dropdown-button-dark-example1" variant="secondary">
+          Service Type
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" active>Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </div>
   );
 };

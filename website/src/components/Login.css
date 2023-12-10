@@ -1,5 +1,8 @@
 body {
   background: #ebebeb;
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
 }
 .login-container {
   --height: 400px;
@@ -19,11 +22,12 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
+  color: rgb(4, 38, 76);
   width: var(--width);
   margin-left: calc(50vw - (var(--width) / 2));
   margin-top: calc(40vh - (var(--height) / 2));
   border: 1px solid black;
-  border-radius: 1em 1em;
+  border-radius: 0.4em;
   text-align: center;
   padding-top: calc(0.1 * var(--height));
   padding-bottom: calc(0.05 * var(--height));
@@ -39,11 +43,10 @@ body {
   margin-top: calc(50vh - (var(--height) / 2 - 10vh));
   margin-left: calc(0.05 * var(--width));
   border: 1px solid black;
-  border-radius: 1em 1em;
+  border-radius: 0.4em;
   text-align: left;
   padding-top: calc(0.1 * var(--height));
   padding-left: calc(0.075 * var(--width));
-  padding-bottom: calc(0.05 * var(--height));
 }
 
 .checkPwd > ul {
@@ -53,6 +56,7 @@ body {
 
 .checkPwd > ul > li {
   margin-bottom: 20px;
+  color: #000;
 }
 
 .login > h2 {
@@ -64,14 +68,17 @@ body {
 .login > form > input {
   width: calc(0.8 * var(--width));
   height: calc(0.1 * var(--height));
-  border-radius: 1em 1em;
+  border-radius: 0.2 em;
   font-size: 100%;
+  color: rgb(4, 38, 76);
   outline: none;
   border: none;
   margin-bottom: calc(0.05 * var(--height));
 }
 .login > form > p {
   margin-left: calc(0.1 * var(--width));
+  color: rgb(4, 38, 76);
+  margin-bottom: 0px;
 }
 
 .login > form > input[type="text"],
@@ -83,29 +90,30 @@ input[type="tel"] {
 }
 
 .login > form > input[type="submit"] {
-  background-color: #b41212;
-  border-radius: 0.67em 0.67em;
-  color: white;
+  background-color: rgb(4, 38, 76);
+  border-radius: 0.2em;
+  color: rgb(255, 255, 255);
   font-size: 150%;
   transition: outline 0.1s, color 0.2s, background-color 0.2s;
 }
 
 .login > form > input[type="text"]:focus,
-input[type="password"]:focus {
-  outline: 2px solid #b41212;
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  outline: 2px solid rgb(4, 38, 76);
 }
 
 .login > form > input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: white;
-  outline: 2px solid #b41212;
-  color: #b41212;
+  outline: 2px solid rgb(4, 38, 76);
+  color: rgb(4, 38, 76);
 }
 
 .login > a {
   display: inline-block;
   height: auto;
-  color: #b41212;
+  color: rgb(4, 38, 76);
   text-decoration: none;
   margin-bottom: 10;
   outline-width: 0px;
@@ -123,7 +131,7 @@ a:focus {
 }
 .login-btns .btn {
   background-color: transparent;
-  color: #b41212;
+  color: rgb(4, 38, 76);
   width: fit-content;
   outline: 0px transparent;
 }
@@ -137,10 +145,12 @@ a:focus {
 
 .show-btns .btn {
   background-color: transparent;
-  color: #b41212;
+  color: rgb(4, 38, 76);
 }
 
-.login-btns .btn:hover,
-.btn:focus {
+.login-btns .btn:hover {
   filter: drop-shadow(0px 0px 15px #000000);
+}
+i {
+  color: rgb(4, 38, 76);
 }

@@ -1,18 +1,46 @@
 .navbar {
-  background: linear-gradient(
-    90deg,
-    rgb(255, 255, 255) 0%,
-    rgb(189, 18, 18) 70%
-  );
+  background: rgb(4, 38, 76);
   height: 90px;
   width: 100%;
-  display: flex;
   justify-content: left;
   align-items: center;
   font-size: 1.2rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 999;
+  border: 0px solid #434141;
+}
+
+.user-icon {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0rem 1rem;
+  height: 90px;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+}
+
+.user-icon > i {
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: font-size 0.2s;
+}
+
+.user-icon > h3 {
+  font-size: 1rem;
+  transition: font-size 0.2s;
+}
+
+.user-icon:hover > i {
+  font-size: 2rem;
+}
+
+.user-icon:hover > h3 {
+  font-size: 1.2rem;
 }
 
 .user-icon {
@@ -56,7 +84,7 @@
 }
 
 .navbar-logo {
-  color: #080808;
+  color: #f1e9e9;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -73,13 +101,14 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 10px;
+  padding-right: 5%;
   list-style: none;
   text-align: center;
   width: 75vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 0.5rem;
 }
 
 .nav-item {
@@ -91,8 +120,8 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0rem 1rem;
-  height: 100%;
+  padding: 0rem 0.5rem;
+  height: 100px;
 }
 
 .nav-links:hover {
@@ -112,6 +141,11 @@
   display: none;
 }
 
+.filter-bar {
+  display: flex;
+  height: 90vh;
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
@@ -119,7 +153,7 @@
 
   .nav-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 90vh;
     position: absolute;
@@ -191,5 +225,20 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
+  }
+}
+
+.sign-btn {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  margin-left: -70%;
+  width: 150%;
+  padding: 10px 5px;
+  margin-top: -5%;
+  transition: background-color 0.2s, color 0.2s;
+  &:hover {
+    background-color: #fff;
+    color: #000;
   }
 }

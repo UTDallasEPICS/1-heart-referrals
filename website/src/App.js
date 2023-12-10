@@ -12,7 +12,8 @@ import LoginPage from './components/pages/LoginPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpPage from './components/pages/SignUpPage';
 import ForgotPage from './components/pages/ForgotPage';
-//Hello
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
