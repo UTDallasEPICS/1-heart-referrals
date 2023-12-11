@@ -1,6 +1,7 @@
 .contact {
-    background-color: lightgray;
-    padding-bottom: 4in;
+    background-color:  rgb(206, 229, 255);
+    color:  rgb(1, 11, 23);
+    padding: 140px 50px 700px;
 }
   
 .contact > h1 {
@@ -8,6 +9,8 @@ text-align: center;
 font-size: 2rem;
 margin-bottom: 30px;
 margin-top: 20px; 
+color:  rgb(4, 38, 76);
+
 }
 
 
@@ -16,10 +19,14 @@ text-align: center;
 font-size: 1.3rem;
 margin-top: 10px;
 margin-bottom: 10px; 
+color:  rgb(4, 38, 76);
+
 }
 
 .contact-item > p > b {
 display: block; 
 font-size: 1.3rem; 
 margin-top: 40px;
+color:  rgb(4, 38, 76);
+
 }

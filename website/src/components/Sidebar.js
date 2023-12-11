@@ -11,28 +11,19 @@ import { FaHeartPulse } from "react-icons/fa6";
 import "./Navbar.css"
 
 
-const NavIcon = styled(Link)`
-  margin-left: 2rem;
-  font-size: 2rem;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: "Gill Sans", sans-serif;
+// const NavIcon = styled(Link)`
+//   margin-left: 2rem;
+//   font-size: 2rem;
+//   height: 80px;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   font-family: "Gill Sans", sans-serif;
+//   padding-bottom: 25px;
 
-`;
+// `;
 
-const NavMenu = styled(Link)`
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 10px;
-  list-style: none;
-  text-align: center;
-  width: 100vw;
-  justify-content: end;
-  margin-right: 1rem;
-  padding-top: 20px ;
-`;
+
 
 const SidebarNav = styled.nav`
   background: rgb(4, 38, 76);
@@ -85,8 +76,8 @@ const Sidebar = () => {
   }, []);
 
   window.addEventListener('resize', showButton);
-  if (location.pathname === '/'|| location.pathname=== '/about-us-container' || location.pathname=== '/our-team'
-  || location.pathname=== '/network-partners'|| location.pathname=== '/contact' || location.pathname === '/login' || location.pathname === '/sign-up' || location.pathname === '/login/forgot' 
+  if (location.pathname === '/' || location.pathname === '/about-us-container' || location.pathname === '/our-team'
+    || location.pathname === '/network-partners' || location.pathname === '/contact' || location.pathname === '/login' || location.pathname === '/sign-up' || location.pathname === '/login/forgot'
   )
     return;
 
@@ -96,22 +87,26 @@ const Sidebar = () => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <nav className='navbar'>
           <div className='navbar-container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <h5>One <FaHeartPulse />Heart</h5>                  
-            <h1>McKINNEY</h1>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+              <h5>One< FaHeartPulse style={{ fontSize: '0.6em' }} />Heart </h5>
+              <h1> McKINNEY</h1>
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-                <Link
-                  to='/products'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                </Link>
-              </li>
+            {/* <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <ul className='nav-menu' style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}> */}
+            <ul className={`nav-menu ${click ? 'active' : ''}`} style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, auto)',
+              gridGap: '10px',
+              listStyle: 'none',
+              textAlign: 'center',
+              width: '100vw',
+              justifyContent: 'end',
+              marginRight: '1rem',
+              paddingTop: '55px'
+            }}>
               <li className='nav-item'>
                 <Link
                   to='/products'
@@ -135,15 +130,16 @@ const Sidebar = () => {
 
 
               {button && <Button onClick={() => {
-              sessionStorage.removeItem("token");
-            }} buttonStyle='btn--outline' to="login"> <div className="user-icon">
-            <i className="fas fa-user"></i>
-          </div>
-            </Button>}
-
+                sessionStorage.removeItem("token");
+              }} buttonStyle='btn--outline' to="login" style={{ paddingBottom: '80px' }}> <div className="user-icon">
+                  <i className="fas fa-user" style={{ paddingBottom: '70px' }}></i>
+                  {/* SIGN-OUT */}
+                </div>
+              </Button>}
             </ul>
+            {/* </ul> */}
 
-            
+
           </div>
         </nav>
 
