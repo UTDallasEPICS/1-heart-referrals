@@ -29,7 +29,7 @@ function Navbar() {
   }, []);
 
   window.addEventListener('resize', showButton);
-  if (location.pathname === '/'  )
+  if (location.pathname === '/' || location.pathname === '/network-partners' || location.pathname === '/contact' || location.pathname === '/our-team' || location.pathname === '/about-us-container')
 
     return (
       <>

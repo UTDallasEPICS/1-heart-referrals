@@ -54,7 +54,6 @@ const NetworkPartners = () => {
 
   return (
     <div className='network-partners'>
-      <Navbar />
       <div className='network-content'>
       <h><b>Network Partners</b></h>
       </div>

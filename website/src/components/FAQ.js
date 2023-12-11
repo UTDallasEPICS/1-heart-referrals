@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 const FAQ = () => {
   return (
     <div className='faq'>
-      <Navbar />
       <div className="faq-content">
         <h1>FAQ</h1>
         

@@ -7,7 +7,6 @@ import Navbar from './Navbar';
 const Contact = () => {
   return (
     <div className='contact'>
-      <Navbar/>
       <h1>
         Contact One Heart McKinney
       </h1>

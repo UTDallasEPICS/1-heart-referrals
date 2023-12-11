@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 const OurTeam = () => {
   return (
     <div className='our-team'>
-      <Navbar/>
       <p><b>Meet Our Team</b></p>
       <p>Scott Elliott - Executive Director</p>
       <p>Cheneda Samuel - Navigator Manager</p>

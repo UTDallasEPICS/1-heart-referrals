@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 const AboutUs = () => {
   return (
     <div className='about-us-container'>
-      <Navbar />
       <div className="about-content">
         <h1>About Us</h1>
         <p>Mission: One Heart McKinney exists to coordinate the WHOLE community to maximize well-being in daily life, and respond to and recover from any community crisis.</p>
