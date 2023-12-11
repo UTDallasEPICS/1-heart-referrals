@@ -1,6 +1,8 @@
 .our-team {
-    background-color: lightgray;
-    padding-bottom: 0.5in;
+    background-color:  rgb(206, 229, 255);
+    color:  rgb(4, 38, 76);
+    padding: 130px 30px;
+    
 }
   
 .our-team > p {
@@ -8,6 +10,8 @@ text-align: center;
 font-size: 1.3rem;
 margin-bottom: 30px;
 margin-top: 20px; 
+color:  rgb(4, 38, 76);
+
 }
 
 .our-team > p > b {
@@ -15,4 +19,6 @@ margin-top: 20px;
     font-size: 2rem;
     margin-bottom: 30px;
     margin-top: 20px; 
+    color:  rgb(1, 13, 27);
+
     }

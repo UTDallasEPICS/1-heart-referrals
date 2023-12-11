@@ -30,6 +30,7 @@ function App() {
     <Router >
       <Navbar />
       <Sidebar />
+
       <Routes>
         <Route path='/login' Component={LoginPage} />
 
@@ -82,6 +83,7 @@ function App() {
         <Route path='/outOfNetworkCases/outAll' exact Component={OutAllCase} />
 
       </Routes>
+
     </Router >
   );
 }

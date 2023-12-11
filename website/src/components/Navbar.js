@@ -29,7 +29,8 @@ function Navbar() {
   }, []);
 
   window.addEventListener('resize', showButton);
-  if (location.pathname === '/')
+  if (location.pathname === '/'  )
+
     return (
       <>
         <nav className='navbar'>
@@ -51,13 +52,9 @@ function Navbar() {
 
 
               <li className='nav-item'>
-                <Link
-                  to='/about-us-container'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
+                <Link to='/about-us-container' className='nav-links'onClick={closeMobileMenu}>
                   About OHM
-                  {/* <NavLink>
+                  <NavLink>
                     <ul className='dropdown-menu'>
                       <li>
                         <NavLink
@@ -78,7 +75,7 @@ function Navbar() {
                         </NavLink>
                       </li>
                     </ul>
-                  </NavLink> */}
+                  </NavLink>
                 </Link>
               </li>
               <li className='nav-item'>
@@ -113,7 +110,7 @@ function Navbar() {
                 </Link>
               </li>
 
-              {/* <li className='nav-item'>
+              <li className='nav-item'>
                 <Link
                   to='/Sidebar'
                   className='nav-links'
@@ -121,7 +118,7 @@ function Navbar() {
                 >
                   Landing Page
                 </Link>
-              </li> */}
+              </li>
 
 
 

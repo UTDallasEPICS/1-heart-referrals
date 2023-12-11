@@ -22,6 +22,18 @@ const NavIcon = styled(Link)`
 
 `;
 
+const NavMenu = styled(Link)`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 100vw;
+  justify-content: end;
+  margin-right: 1rem;
+  padding-top: 20px ;
+`;
+
 const SidebarNav = styled.nav`
   background: rgb(4, 38, 76);
   font-size: 2rem;
@@ -48,7 +60,7 @@ const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(true);
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
@@ -73,8 +85,12 @@ const Sidebar = () => {
   }, []);
 
   window.addEventListener('resize', showButton);
-  if (location.pathname === '/' || location.pathname === '/login' || location.pathname === '/sign-up' || location.pathname === '/login/forgot')
+  if (location.pathname === '/'|| location.pathname=== '/about-us-container' || location.pathname=== '/our-team'
+  || location.pathname=== '/network-partners'|| location.pathname=== '/contact' || location.pathname === '/login' || location.pathname === '/sign-up' || location.pathname === '/login/forgot' 
+  )
     return;
+
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -88,6 +104,14 @@ const Sidebar = () => {
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+                <Link
+                  to='/products'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                </Link>
+              </li>
               <li className='nav-item'>
                 <Link
                   to='/products'

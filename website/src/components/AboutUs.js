@@ -22,7 +22,7 @@ const AboutUs = () => {
           </ul>
         </p>
         <p>
-        Our goal is to coordinate resources across the WHOLE community of McKinney to help our friends and neighbors experiencing difficulties to access all the services they need, while only telling their story <b>one time.</b>
+        Our goal is to coordinate resources across the WHOLE community of McKinney to help our friends and neighbors experiencing difficulties to access all the services they need, while only telling their story one time.
         </p>
       </div>
     </div>

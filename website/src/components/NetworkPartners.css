@@ -1,6 +1,7 @@
 .network-partners {
-    background-color: lightgray;
-    padding-bottom: 0.5in;
+    background-color:  rgb(206, 229, 255);
+    color:  rgb(4, 38, 76);
+    padding: 130px 30px;
     text-align: center;
 }
 
@@ -14,6 +15,8 @@ padding-top: 0.5in;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-gap: 20px; 
+color:  rgb(4, 38, 76);
+
 }
 
 .partner-item {
@@ -21,14 +24,15 @@ text-align: center;
 }
 
 .partner-item img {
-max-width: 100%; 
+width: 150px; 
+height: 90;
 }
 
 .partner-item button {
 margin-top: 10px;
 width: 120px; 
 height: 80px; 
-background-color: rgb(227, 37, 37);
+background-color:rgb(4, 38, 76);
 color: black;
 border: none;
 cursor: pointer;
@@ -36,6 +40,6 @@ transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect
 }
 
 .partner-item button:hover {
-background-color: red;
+background-color: rgb(4, 38, 76);
 color: white;
 }
