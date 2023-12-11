@@ -28,9 +28,9 @@ import url22 from '../components/images/22.png';
 
 const NetworkPartners = () => {
   const partners = [
-    { name: 'Partner 1', imageUrl: url1, link: '', buttonText: 'All in the Family services' },
-    { name: 'Partner 2', imageUrl: url2, link: '', buttonText: 'Alliance of the Elite Youth Leadership' },
-    { name: 'Partner 3', imageUrl: url3, link: '', buttonText: 'A Motivating Love' },
+    { name: 'Partner 1', imageUrl: url1, link: 'https://www.aitfservices.org/', buttonText: 'All in the Family services' },
+    { name: 'Partner 2', imageUrl: url2, link: 'https://aeyleadership.org/', buttonText: 'Alliance of the Elite Youth Leadership' },
+    { name: 'Partner 3', imageUrl: url3, link: 'https://www.amotivatinglove.org/', buttonText: 'A Motivating Love' },
     { name: 'Partner 4', imageUrl: url4, link: 'https://cfhome.org/', buttonText: 'Christ Fellowship' },
     { name: 'Partner 5', imageUrl: url5, link: 'https://communitygardenkitchen.org/', buttonText: 'Community Garden Kitchen' },
     { name: 'Partner 6', imageUrl: url6, link: 'https://www.mckinneytexas.org/', buttonText: 'City of McKinney' },
